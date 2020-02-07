@@ -3,6 +3,9 @@
 
 This guide describes how to test the Linux kernel
 BPF JIT for 32-bit RISC-V (RV32).
+Currently, it supports running the builtin kernel
+tests (lib/testbpf.c) and the `test_verifier`
+self-tests (tools/testing/selftests/bpf/test_verifier.c).
 
 First clone this repository somewhere to use
 the configuration scripts and images contained
