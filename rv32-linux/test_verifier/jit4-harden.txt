@@ -1,0 +1,2060 @@
+#0/u invalid and of negative number FAIL
+Unexpected error message!
+    EXP: R0 max value is outside of the array range
+    RES:
+#0/p invalid and of negative number OK
+#1/u invalid range check OK
+#1/p invalid range check OK
+#2/u valid map access into an array with a constant OK
+#2/p valid map access into an array with a constant OK
+#3/u valid map access into an array with a register FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: verification time 121 usec
+stack depth 8
+processed 9 insns (limit 1000000) max_states_per_insn 1 total_states 1 peak_states 1 mark_read 1
+
+verification time 121 usec
+stack depth 8
+processed 9 insns (limit 1000000) max_states_per_insn 1 total_states 1 peak_states 1 mark_read 1
+#3/p valid map access into an array with a register OK (NOTE: not executed due to unknown alignment)
+#4/u valid map access into an array with a variable FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: verification time 133 usec
+stack depth 8
+processed 12 insns (limit 1000000) max_states_per_insn 1 total_states 1 peak_states 1 mark_read 1
+
+verification time 133 usec
+stack depth 8
+processed 12 insns (limit 1000000) max_states_per_insn 1 total_states 1 peak_states 1 mark_read 1
+#4/p valid map access into an array with a variable OK (NOTE: not executed due to unknown alignment)
+#5/u valid map access into an array with a signed variable FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: verification time 157 usec
+stack depth 8
+processed 14 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+
+verification time 157 usec
+stack depth 8
+processed 14 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#5/p valid map access into an array with a signed variable OK (NOTE: not executed due to unknown alignment)
+#6/u invalid map access into an array with a constant OK
+#6/p invalid map access into an array with a constant OK
+#7/u invalid map access into an array with a register OK
+#7/p invalid map access into an array with a register OK
+#8/u invalid map access into an array with a variable FAIL
+Unexpected error message!
+    EXP: R0 unbounded memory access, make sure to bounds check any array access into a map
+    RES: invalid access to map value, value_size=48 off=48 size=8
+R0 min value is outside of the array range
+verification time 130 usec
+stack depth 8
+processed 10 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+invalid access to map value, value_size=48 off=48 size=8
+R0 min value is outside of the array range
+verification time 130 usec
+stack depth 8
+processed 10 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#8/p invalid map access into an array with a variable OK
+#9/u invalid map access into an array with no floor check FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: R0 unbounded memory access, make sure to bounds check any array access into a map
+verification time 604 usec
+stack depth 8
+processed 10 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+R0 unbounded memory access, make sure to bounds check any array access into a map
+verification time 604 usec
+stack depth 8
+processed 10 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#9/p invalid map access into an array with no floor check OK
+#10/u invalid map access into an array with a invalid max check FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: R0 unbounded memory access, make sure to bounds check any array access into a map
+verification time 182 usec
+stack depth 8
+processed 17 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+
+R0 unbounded memory access, make sure to bounds check any array access into a map
+verification time 182 usec
+stack depth 8
+processed 17 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#10/p invalid map access into an array with a invalid max check OK
+#11/u invalid map access into an array with a invalid max check FAIL
+Unexpected error message!
+    EXP: R0 pointer += pointer
+    RES: invalid access to map value, value_size=48 off=44 size=8
+R0 max value is outside of the array range
+verification time 164 usec
+stack depth 8
+processed 17 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+
+invalid access to map value, value_size=48 off=44 size=8
+R0 max value is outside of the array range
+verification time 164 usec
+stack depth 8
+processed 17 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#11/p invalid map access into an array with a invalid max check OK
+#12/u valid read map access into a read-only array 1 OK
+#12/p valid read map access into a read-only array 1 OK
+#13/p valid read map access into a read-only array 2 FAIL retval 65507 != -29 (run 1/1)
+verification time 131 usec
+stack depth 8
+processed 14 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#14/u invalid write map access into a read-only array 1 OK
+#14/p invalid write map access into a read-only array 1 OK
+#15/p invalid write map access into a read-only array 2 OK
+#16/u valid write map access into a write-only array 1 OK
+#16/p valid write map access into a write-only array 1 OK
+#17/p valid write map access into a write-only array 2 OK
+#18/u invalid read map access into a write-only array 1 OK
+#18/p invalid read map access into a write-only array 1 OK
+#19/p invalid read map access into a write-only array 2 OK
+#20/u empty prog OK
+#20/p empty prog OK
+#21/u only exit insn OK
+#21/p only exit insn OK
+#22/u no bpf_exit OK
+#22/p no bpf_exit OK
+#23/u invalid call insn1 OK
+#23/p invalid call insn1 OK
+#24/u invalid call insn2 OK
+#24/p invalid call insn2 OK
+#25/u invalid function call OK
+#25/p invalid function call OK
+#26/p invalid argument register OK
+#27/p non-invalid argument register OK
+#28/u add+sub+mul OK
+#28/p add+sub+mul OK
+#29/p xor32 zero extend check OK
+#30/u arsh32 on imm OK
+#30/p arsh32 on imm OK
+#31/u arsh32 on imm 2 OK
+#31/p arsh32 on imm 2 OK
+#32/u arsh32 on reg OK
+#32/p arsh32 on reg OK
+#33/u arsh32 on reg 2 OK
+#33/p arsh32 on reg 2 OK
+#34/u arsh64 on imm OK
+#34/p arsh64 on imm OK
+#35/u arsh64 on reg OK
+#35/p arsh64 on reg OK
+#36/u lsh64 by 0 imm OK
+#36/p lsh64 by 0 imm OK
+#37/u rsh64 by 0 imm OK
+#37/p rsh64 by 0 imm OK
+#38/u arsh64 by 0 imm OK
+#38/p arsh64 by 0 imm OK
+#39/u lsh64 by 0 reg OK
+#39/p lsh64 by 0 reg OK
+#40/u rsh64 by 0 reg OK
+#40/p rsh64 by 0 reg OK
+#41/u arsh64 by 0 reg OK
+#41/p arsh64 by 0 reg OK
+#42/u invalid 64-bit BPF_END OK
+#42/p invalid 64-bit BPF_END OK
+#43/p mov64 src == dst OK
+#44/p mov64 src != dst OK
+#45/u stack out of bounds OK
+#45/p stack out of bounds OK
+#46/u uninitialized stack1 OK
+#46/p uninitialized stack1 OK
+#47/u uninitialized stack2 OK
+#47/p uninitialized stack2 OK
+#48/u invalid fp arithmetic OK
+#48/p invalid fp arithmetic OK
+#49/u non-invalid fp arithmetic OK
+#49/p non-invalid fp arithmetic OK
+#50/u misaligned read from stack OK
+#50/p misaligned read from stack OK
+#51/u invalid src register in STX OK
+#51/p invalid src register in STX OK
+#52/u invalid dst register in STX OK
+#52/p invalid dst register in STX OK
+#53/u invalid dst register in ST OK
+#53/p invalid dst register in ST OK
+#54/u invalid src register in LDX OK
+#54/p invalid src register in LDX OK
+#55/u invalid dst register in LDX OK
+#55/p invalid dst register in LDX OK
+#56/u subtraction bounds (map value) variant 1 OK
+#56/p subtraction bounds (map value) variant 1 OK
+#57/u subtraction bounds (map value) variant 2 OK
+#57/p subtraction bounds (map value) variant 2 OK
+#58/u check subtraction on pointers for unpriv OK
+#58/p check subtraction on pointers for unpriv OK
+#59/u bounds check based on zero-extended MOV OK
+#59/p bounds check based on zero-extended MOV OK
+#60/u bounds check based on sign-extended MOV. test1 OK
+#60/p bounds check based on sign-extended MOV. test1 OK
+#61/u bounds check based on sign-extended MOV. test2 OK
+#61/p bounds check based on sign-extended MOV. test2 OK
+#62/p bounds check based on reg_off + var_off + insn_off. test1 OK
+#63/p bounds check based on reg_off + var_off + insn_off. test2 OK
+#64/u bounds check after truncation of non-boundary-crossing range OK
+#64/p bounds check after truncation of non-boundary-crossing range OK
+#65/u bounds check after truncation of boundary-crossing range (1) OK
+#65/p bounds check after truncation of boundary-crossing range (1) OK
+#66/u bounds check after truncation of boundary-crossing range (2) OK
+#66/p bounds check after truncation of boundary-crossing range (2) OK
+#67/u bounds check after wrapping 32-bit addition OK
+#67/p bounds check after wrapping 32-bit addition OK
+#68/u bounds check after shift with oversized count operand OK
+#68/p bounds check after shift with oversized count operand OK
+#69/u bounds check after right shift of maybe-negative number OK
+#69/p bounds check after right shift of maybe-negative number OK
+#70/u bounds check after 32-bit right shift with 64-bit input OK
+#70/p bounds check after 32-bit right shift with 64-bit input OK
+#71/u bounds check map access with off+size signed 32bit overflow. test1 OK
+#71/p bounds check map access with off+size signed 32bit overflow. test1 OK
+#72/u bounds check map access with off+size signed 32bit overflow. test2 OK
+#72/p bounds check map access with off+size signed 32bit overflow. test2 OK
+#73/u bounds check map access with off+size signed 32bit overflow. test3 OK
+#73/p bounds check map access with off+size signed 32bit overflow. test3 OK
+#74/u bounds check map access with off+size signed 32bit overflow. test4 OK
+#74/p bounds check map access with off+size signed 32bit overflow. test4 OK
+#75/u check deducing bounds from const, 1 OK
+#75/p check deducing bounds from const, 1 OK
+#76/u check deducing bounds from const, 2 OK
+#76/p check deducing bounds from const, 2 OK
+#77/u check deducing bounds from const, 3 OK
+#77/p check deducing bounds from const, 3 OK
+#78/u check deducing bounds from const, 4 OK
+#78/p check deducing bounds from const, 4 OK
+#79/u check deducing bounds from const, 5 OK
+#79/p check deducing bounds from const, 5 OK
+#80/u check deducing bounds from const, 6 OK
+#80/p check deducing bounds from const, 6 OK
+#81/u check deducing bounds from const, 7 FAIL
+Unexpected error message!
+    EXP: dereference of modified ctx ptr
+    RES: R0 tried to subtract pointer from scalar
+verification time 182 usec
+stack depth 0
+processed 3 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+R0 tried to subtract pointer from scalar
+verification time 182 usec
+stack depth 0
+processed 3 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#81/p check deducing bounds from const, 7 OK
+#82/u check deducing bounds from const, 8 OK
+#82/p check deducing bounds from const, 8 OK
+#83/u check deducing bounds from const, 9 OK
+#83/p check deducing bounds from const, 9 OK
+#84/u check deducing bounds from const, 10 OK
+#84/p check deducing bounds from const, 10 OK
+#85/u bounds checks mixing signed and unsigned, positive bounds OK
+#85/p bounds checks mixing signed and unsigned, positive bounds OK
+#86/u bounds checks mixing signed and unsigned OK
+#86/p bounds checks mixing signed and unsigned OK
+#87/u bounds checks mixing signed and unsigned, variant 2 OK
+#87/p bounds checks mixing signed and unsigned, variant 2 OK
+#88/u bounds checks mixing signed and unsigned, variant 3 OK
+#88/p bounds checks mixing signed and unsigned, variant 3 OK
+#89/u bounds checks mixing signed and unsigned, variant 4 OK
+#89/p bounds checks mixing signed and unsigned, variant 4 OK
+#90/u bounds checks mixing signed and unsigned, variant 5 OK
+#90/p bounds checks mixing signed and unsigned, variant 5 OK
+#91/u bounds checks mixing signed and unsigned, variant 6 OK
+#91/p bounds checks mixing signed and unsigned, variant 6 OK
+#92/u bounds checks mixing signed and unsigned, variant 7 OK
+#92/p bounds checks mixing signed and unsigned, variant 7 OK
+#93/u bounds checks mixing signed and unsigned, variant 8 OK
+#93/p bounds checks mixing signed and unsigned, variant 8 OK
+#94/u bounds checks mixing signed and unsigned, variant 9 OK
+#94/p bounds checks mixing signed and unsigned, variant 9 OK
+#95/u bounds checks mixing signed and unsigned, variant 10 OK
+#95/p bounds checks mixing signed and unsigned, variant 10 OK
+#96/u bounds checks mixing signed and unsigned, variant 11 OK
+#96/p bounds checks mixing signed and unsigned, variant 11 OK
+#97/u bounds checks mixing signed and unsigned, variant 12 OK
+#97/p bounds checks mixing signed and unsigned, variant 12 OK
+#98/u bounds checks mixing signed and unsigned, variant 13 OK
+#98/p bounds checks mixing signed and unsigned, variant 13 OK
+#99/u bounds checks mixing signed and unsigned, variant 14 OK
+#99/p bounds checks mixing signed and unsigned, variant 14 OK
+#100/u bounds checks mixing signed and unsigned, variant 15 OK
+#100/p bounds checks mixing signed and unsigned, variant 15 OK
+#101/p bpf_get_stack return R0 within range SKIP (unsupported program type 5)
+#102/p calls: basic sanity SKIP (unsupported program type 5)
+#103/u calls: not on unpriviledged OK
+#103/p calls: not on unpriviledged OK
+#104/p calls: div by 0 in subprog OK
+#105/p calls: multiple ret types in subprog 1 OK
+#106/p calls: multiple ret types in subprog 2 OK
+#107/p calls: overlapping caller/callee SKIP (unsupported program type 5)
+#108/p calls: wrong recursive calls SKIP (unsupported program type 5)
+#109/p calls: wrong src reg SKIP (unsupported program type 5)
+#110/p calls: wrong off value SKIP (unsupported program type 5)
+#111/p calls: jump back loop SKIP (unsupported program type 5)
+#112/p calls: conditional call SKIP (unsupported program type 5)
+#113/p calls: conditional call 2 SKIP (unsupported program type 5)
+#114/u calls: conditional call 3 OK
+#114/p calls: conditional call 3 OK
+#115/p calls: conditional call 4 SKIP (unsupported program type 5)
+#116/p calls: conditional call 5 OK
+#117/p calls: conditional call 6 OK
+#118/p calls: using r0 returned by callee SKIP (unsupported program type 5)
+#119/p calls: using uninit r0 from callee SKIP (unsupported program type 5)
+#120/p calls: callee is using r1 OK
+#121/u calls: callee using args1 OK
+#121/p calls: callee using args1 OK
+#122/p calls: callee using wrong args2 SKIP (unsupported program type 5)
+#123/u calls: callee using two args OK
+#123/p calls: callee using two args OK
+#124/p calls: callee changing pkt pointers OK
+#125/u calls: ptr null check in subprog OK
+#125/p calls: ptr null check in subprog OK
+#126/p calls: two calls with args OK
+#127/p calls: calls with stack arith OK
+#128/p calls: calls with misaligned stack access OK
+#129/p calls: calls control flow, jump test OK
+#130/p calls: calls control flow, jump test 2 OK
+#131/p calls: two calls with bad jump SKIP (unsupported program type 5)
+#132/p calls: recursive call. test1 SKIP (unsupported program type 5)
+#133/p calls: recursive call. test2 SKIP (unsupported program type 5)
+#134/p calls: unreachable code SKIP (unsupported program type 5)
+#135/p calls: invalid call SKIP (unsupported program type 5)
+#136/p calls: invalid call 2 SKIP (unsupported program type 5)
+#137/p calls: jumping across function bodies. test1 SKIP (unsupported program type 5)
+#138/p calls: jumping across function bodies. test2 SKIP (unsupported program type 5)
+#139/p calls: call without exit SKIP (unsupported program type 5)
+#140/p calls: call into middle of ld_imm64 SKIP (unsupported program type 5)
+#141/p calls: call into middle of other call SKIP (unsupported program type 5)
+#142/p calls: ld_abs with changing ctx data in callee OK
+#143/p calls: two calls with bad fallthrough SKIP (unsupported program type 5)
+#144/p calls: two calls with stack read OK
+#145/p calls: two calls with stack write OK
+#146/p calls: stack overflow using two frames (pre-call access) OK
+#147/p calls: stack overflow using two frames (post-call access) OK
+#148/p calls: stack depth check using three frames. test1 OK
+#149/p calls: stack depth check using three frames. test2 OK
+#150/p calls: stack depth check using three frames. test3 OK
+#151/p calls: stack depth check using three frames. test4 OK
+#152/p calls: stack depth check using three frames. test5 OK
+#153/p calls: stack depth check in dead code OK
+#154/p calls: spill into caller stack frame OK
+#155/p calls: write into caller stack frame OK
+#156/p calls: write into callee stack frame OK
+#157/p calls: two calls with stack write and void return OK
+#158/u calls: ambiguous return value OK
+#158/p calls: ambiguous return value OK
+#159/p calls: two calls that return map_value OK
+#160/p calls: two calls that return map_value with bool condition OK
+#161/p calls: two calls that return map_value with incorrect bool check OK
+#162/p calls: two calls that receive map_value via arg=ptr_stack_of_caller. test1 OK
+#163/p calls: two calls that receive map_value via arg=ptr_stack_of_caller. test2 OK
+#164/p calls: two jumps that receive map_value via arg=ptr_stack_of_jumper. test3 OK
+#165/p calls: two calls that receive map_value_ptr_or_null via arg. test1 OK
+#166/p calls: two calls that receive map_value_ptr_or_null via arg. test2 OK
+#167/p calls: pkt_ptr spill into caller stack OK (NOTE: not executed due to unknown alignment)
+#168/p calls: pkt_ptr spill into caller stack 2 OK
+#169/p calls: pkt_ptr spill into caller stack 3 OK (NOTE: not executed due to unknown alignment)
+#170/p calls: pkt_ptr spill into caller stack 4 OK (NOTE: not executed due to unknown alignment)
+#171/p calls: pkt_ptr spill into caller stack 5 OK
+#172/p calls: pkt_ptr spill into caller stack 6 OK
+#173/p calls: pkt_ptr spill into caller stack 7 OK
+#174/p calls: pkt_ptr spill into caller stack 8 OK (NOTE: not executed due to unknown alignment)
+#175/p calls: pkt_ptr spill into caller stack 9 OK
+#176/p calls: caller stack init to zero or map_value_or_null OK
+#177/p calls: stack init to zero and pruning OK
+#178/u calls: ctx read at start of subprog OK
+#178/p calls: ctx read at start of subprog OK
+#179/u calls: cross frame pruning OK
+#179/p calls: cross frame pruning OK
+#180/u calls: cross frame pruning - liveness propagation OK
+#180/p calls: cross frame pruning - liveness propagation OK
+#181/u unreachable OK
+#181/p unreachable OK
+#182/u unreachable2 OK
+#182/p unreachable2 OK
+#183/u out of range jump OK
+#183/p out of range jump OK
+#184/u out of range jump2 OK
+#184/p out of range jump2 OK
+#185/u loop (back-edge) OK
+#185/p loop (back-edge) OK
+#186/u loop2 (back-edge) OK
+#186/p loop2 (back-edge) OK
+#187/u conditional loop OK
+#187/p conditional loop OK
+#188/p bpf_exit with invalid return code. test1 OK
+#189/p bpf_exit with invalid return code. test2 OK
+#190/p bpf_exit with invalid return code. test3 OK
+#191/p bpf_exit with invalid return code. test4 OK
+#192/p bpf_exit with invalid return code. test5 OK
+#193/p bpf_exit with invalid return code. test6 OK
+#194/p bpf_exit with invalid return code. test7 OK
+#195/u direct packet read test#1 for CGROUP_SKB OK
+#195/p direct packet read test#1 for CGROUP_SKB OK
+#196/u direct packet read test#2 for CGROUP_SKB OK
+#196/p direct packet read test#2 for CGROUP_SKB OK
+#197/u direct packet read test#3 for CGROUP_SKB OK
+#197/p direct packet read test#3 for CGROUP_SKB OK
+#198/u direct packet read test#4 for CGROUP_SKB OK
+#198/p direct packet read test#4 for CGROUP_SKB OK
+#199/u invalid access of tc_classid for CGROUP_SKB OK
+#199/p invalid access of tc_classid for CGROUP_SKB OK
+#200/u invalid access of data_meta for CGROUP_SKB OK
+#200/p invalid access of data_meta for CGROUP_SKB OK
+#201/u invalid access of flow_keys for CGROUP_SKB OK
+#201/p invalid access of flow_keys for CGROUP_SKB OK
+#202/u invalid write access to napi_id for CGROUP_SKB OK
+#202/p invalid write access to napi_id for CGROUP_SKB OK
+#203/u write tstamp from CGROUP_SKB OK
+#203/p write tstamp from CGROUP_SKB OK
+#204/u read tstamp from CGROUP_SKB OK
+#204/p read tstamp from CGROUP_SKB OK
+#205/u valid cgroup storage access OK
+#205/p valid cgroup storage access OK
+#206/u invalid cgroup storage access 1 OK
+#206/p invalid cgroup storage access 1 OK
+#207/u invalid cgroup storage access 2 OK
+#207/p invalid cgroup storage access 2 OK
+#208/u invalid cgroup storage access 3 OK
+#208/p invalid cgroup storage access 3 OK
+#209/u invalid cgroup storage access 4 FAIL
+Unexpected error message!
+    EXP: invalid access to map value, value_size=64 off=-2 size=4
+    RES: invalid access to map value, value_size=64 off=256 size=4
+R0 min value is outside of the array range
+verification time 157 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+invalid access to map value, value_size=64 off=256 size=4
+R0 min value is outside of the array range
+verification time 157 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#209/p invalid cgroup storage access 4 OK
+#210/u invalid cgroup storage access 5 OK
+#210/p invalid cgroup storage access 5 OK
+#211/u invalid cgroup storage access 6 OK
+#211/p invalid cgroup storage access 6 OK
+#212/u valid per-cpu cgroup storage access OK
+#212/p valid per-cpu cgroup storage access OK
+#213/u invalid per-cpu cgroup storage access 1 OK
+#213/p invalid per-cpu cgroup storage access 1 OK
+#214/u invalid per-cpu cgroup storage access 2 OK
+#214/p invalid per-cpu cgroup storage access 2 OK
+#215/u invalid per-cpu cgroup storage access 3 OK
+#215/p invalid per-cpu cgroup storage access 3 OK
+#216/u invalid per-cpu cgroup storage access 4 FAIL
+Unexpected error message!
+    EXP: invalid access to map value, value_size=64 off=-2 size=4
+    RES: invalid access to map value, value_size=64 off=256 size=4
+R0 min value is outside of the array range
+verification time 343 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+invalid access to map value, value_size=64 off=256 size=4
+R0 min value is outside of the array range
+verification time 343 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#216/p invalid per-cpu cgroup storage access 4 OK
+#217/u invalid per-cpu cgroup storage access 5 OK
+#217/p invalid per-cpu cgroup storage access 5 OK
+#218/u invalid per-cpu cgroup storage access 6 OK
+#218/p invalid per-cpu cgroup storage access 6 OK
+#219/p constant register |= constant should keep constant type SKIP (unsupported program type 5)
+#220/p constant register |= constant should not bypass stack boundary checks SKIP (unsupported program type 5)
+#221/p constant register |= constant register should keep constant type SKIP (unsupported program type 5)
+#222/p constant register |= constant register should not bypass stack boundary checks SKIP (unsupported program type 5)
+#223/p context stores via ST OK
+#224/p context stores via XADD OK
+#225/p arithmetic ops make PTR_TO_CTX unusable OK
+#226/p pass unmodified ctx pointer to helper OK
+#227/p pass modified ctx pointer to helper, 1 OK
+#228/u pass modified ctx pointer to helper, 2 OK
+#228/p pass modified ctx pointer to helper, 2 OK
+#229/p pass modified ctx pointer to helper, 3 OK
+#230/u access skb fields ok OK
+#230/p access skb fields ok OK
+#231/u access skb fields bad1 OK
+#231/p access skb fields bad1 OK
+#232/u access skb fields bad2 OK
+#232/p access skb fields bad2 OK
+#233/u access skb fields bad3 OK
+#233/p access skb fields bad3 OK
+#234/u access skb fields bad4 OK
+#234/p access skb fields bad4 OK
+#235/u invalid access __sk_buff family OK
+#235/p invalid access __sk_buff family OK
+#236/u invalid access __sk_buff remote_ip4 OK
+#236/p invalid access __sk_buff remote_ip4 OK
+#237/u invalid access __sk_buff local_ip4 OK
+#237/p invalid access __sk_buff local_ip4 OK
+#238/u invalid access __sk_buff remote_ip6 OK
+#238/p invalid access __sk_buff remote_ip6 OK
+#239/u invalid access __sk_buff local_ip6 OK
+#239/p invalid access __sk_buff local_ip6 OK
+#240/u invalid access __sk_buff remote_port OK
+#240/p invalid access __sk_buff remote_port OK
+#241/u invalid access __sk_buff remote_port OK
+#241/p invalid access __sk_buff remote_port OK
+#242/p valid access __sk_buff family OK
+#243/p valid access __sk_buff remote_ip4 OK
+#244/p valid access __sk_buff local_ip4 OK
+#245/p valid access __sk_buff remote_ip6 OK
+#246/p valid access __sk_buff local_ip6 OK
+#247/p valid access __sk_buff remote_port OK
+#248/p valid access __sk_buff remote_port OK
+#249/p invalid access of tc_classid for SK_SKB OK
+#250/p invalid access of skb->mark for SK_SKB OK
+#251/p check skb->mark is not writeable by SK_SKB OK
+#252/p check skb->tc_index is writeable by SK_SKB OK
+#253/p check skb->priority is writeable by SK_SKB OK
+#254/p direct packet read for SK_SKB OK
+#255/p direct packet write for SK_SKB OK
+#256/p overlapping checks for direct packet access SK_SKB OK
+#257/u check skb->mark is not writeable by sockets OK
+#257/p check skb->mark is not writeable by sockets OK
+#258/u check skb->tc_index is not writeable by sockets OK
+#258/p check skb->tc_index is not writeable by sockets OK
+#259/u check cb access: byte OK
+#259/p check cb access: byte OK
+#260/u __sk_buff->hash, offset 0, byte store not permitted OK
+#260/p __sk_buff->hash, offset 0, byte store not permitted OK
+#261/u __sk_buff->tc_index, offset 3, byte store not permitted OK
+#261/p __sk_buff->tc_index, offset 3, byte store not permitted OK
+#262/u check skb->hash byte load permitted OK
+#262/p check skb->hash byte load permitted OK
+#263/u check skb->hash byte load permitted 1 OK
+#263/p check skb->hash byte load permitted 1 OK
+#264/u check skb->hash byte load permitted 2 OK
+#264/p check skb->hash byte load permitted 2 OK
+#265/u check skb->hash byte load permitted 3 OK
+#265/p check skb->hash byte load permitted 3 OK
+#266/p check cb access: byte, wrong type OK
+#267/u check cb access: half OK
+#267/p check cb access: half OK
+#268/u check cb access: half, unaligned OK
+#268/p check cb access: half, unaligned OK
+#269/u check __sk_buff->hash, offset 0, half store not permitted OK
+#269/p check __sk_buff->hash, offset 0, half store not permitted OK
+#270/u check __sk_buff->tc_index, offset 2, half store not permitted OK
+#270/p check __sk_buff->tc_index, offset 2, half store not permitted OK
+#271/u check skb->hash half load permitted OK
+#271/p check skb->hash half load permitted OK
+#272/u check skb->hash half load permitted 2 OK
+#272/p check skb->hash half load permitted 2 OK
+#273/u check skb->hash half load not permitted, unaligned 1 FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access
+    RES: verification time 117 usec
+stack depth 0
+processed 3 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+verification time 117 usec
+stack depth 0
+processed 3 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#273/p check skb->hash half load not permitted, unaligned 1 OK
+#274/u check skb->hash half load not permitted, unaligned 3 OK
+#274/p check skb->hash half load not permitted, unaligned 3 OK
+#275/p check cb access: half, wrong type OK
+#276/u check cb access: word OK
+#276/p check cb access: word OK
+#277/u check cb access: word, unaligned 1 OK
+#277/p check cb access: word, unaligned 1 OK
+#278/u check cb access: word, unaligned 2 OK
+#278/p check cb access: word, unaligned 2 OK
+#279/u check cb access: word, unaligned 3 OK
+#279/p check cb access: word, unaligned 3 OK
+#280/u check cb access: word, unaligned 4 OK
+#280/p check cb access: word, unaligned 4 OK
+#281/u check cb access: double OK
+#281/p check cb access: double OK
+#282/u check cb access: double, unaligned 1 OK
+#282/p check cb access: double, unaligned 1 OK
+#283/u check cb access: double, unaligned 2 OK
+#283/p check cb access: double, unaligned 2 OK
+#284/u check cb access: double, oob 1 OK
+#284/p check cb access: double, oob 1 OK
+#285/u check cb access: double, oob 2 OK
+#285/p check cb access: double, oob 2 OK
+#286/u check __sk_buff->ifindex dw store not permitted OK
+#286/p check __sk_buff->ifindex dw store not permitted OK
+#287/u check __sk_buff->ifindex dw load not permitted OK
+#287/p check __sk_buff->ifindex dw load not permitted OK
+#288/p check cb access: double, wrong type OK
+#289/p check out of range skb->cb access OK
+#290/u write skb fields from socket prog OK
+#290/p write skb fields from socket prog OK
+#291/p write skb fields from tc_cls_act prog OK
+#292/u check skb->data half load not permitted OK
+#292/p check skb->data half load not permitted OK
+#293/u read gso_segs from CGROUP_SKB OK
+#293/p read gso_segs from CGROUP_SKB OK
+#294/u read gso_segs from CGROUP_SKB OK
+#294/p read gso_segs from CGROUP_SKB OK
+#295/u write gso_segs from CGROUP_SKB OK
+#295/p write gso_segs from CGROUP_SKB OK
+#296/p read gso_segs from CLS OK
+#297/u check wire_len is not readable by sockets OK
+#297/p check wire_len is not readable by sockets OK
+#298/p check wire_len is readable by tc classifier OK
+#299/p check wire_len is not writable by tc classifier OK
+#300/p valid access family in SK_MSG OK
+#301/p valid access remote_ip4 in SK_MSG OK
+#302/p valid access local_ip4 in SK_MSG OK
+#303/p valid access remote_port in SK_MSG OK
+#304/p valid access local_port in SK_MSG OK
+#305/p valid access remote_ip6 in SK_MSG OK
+#306/p valid access local_ip6 in SK_MSG OK
+#307/p valid access size in SK_MSG OK
+#308/p invalid 64B read of size in SK_MSG OK
+#309/p invalid read past end of SK_MSG OK
+#310/p invalid read offset in SK_MSG OK
+#311/p direct packet read for SK_MSG OK
+#312/p direct packet write for SK_MSG OK
+#313/p overlapping checks for direct packet access SK_MSG OK
+#314/u dead code: start OK
+#314/p dead code: start OK
+#315/u dead code: mid 1 OK
+#315/p dead code: mid 1 OK
+#316/u dead code: mid 2 OK
+#316/p dead code: mid 2 OK
+#317/u dead code: end 1 OK
+#317/p dead code: end 1 OK
+#318/u dead code: end 2 OK
+#318/p dead code: end 2 OK
+#319/u dead code: end 3 OK
+#319/p dead code: end 3 OK
+#320/u dead code: tail of main + func OK
+#320/p dead code: tail of main + func OK
+#321/u dead code: tail of main + two functions OK
+#321/p dead code: tail of main + two functions OK
+#322/u dead code: function in the middle and mid of another func OK
+#322/p dead code: function in the middle and mid of another func OK
+#323/u dead code: middle of main before call OK
+#323/p dead code: middle of main before call OK
+#324/u dead code: start of a function OK
+#324/p dead code: start of a function OK
+#325/p pkt_end - pkt_start is allowed OK
+#326/p direct packet access: test1 OK
+#327/p direct packet access: test2 OK
+#328/u direct packet access: test3 OK
+#328/p direct packet access: test3 OK
+#329/p direct packet access: test4 (write) OK
+#330/p direct packet access: test5 (pkt_end >= reg, good access) OK
+#331/p direct packet access: test6 (pkt_end >= reg, bad access) OK
+#332/p direct packet access: test7 (pkt_end >= reg, both accesses) OK
+#333/p direct packet access: test8 (double test, variant 1) OK
+#334/p direct packet access: test9 (double test, variant 2) OK
+#335/p direct packet access: test10 (write invalid) OK
+#336/p direct packet access: test11 (shift, good access) OK
+#337/p direct packet access: test12 (and, good access) OK
+#338/p direct packet access: test13 (branches, good access) OK
+#339/p direct packet access: test14 (pkt_ptr += 0, CONST_IMM, good access) OK
+#340/p direct packet access: test15 (spill with xadd) OK
+#341/p direct packet access: test16 (arith on data_end) OK
+#342/p direct packet access: test17 (pruning, alignment) OK
+#343/p direct packet access: test18 (imm += pkt_ptr, 1) OK
+#344/p direct packet access: test19 (imm += pkt_ptr, 2) OK
+#345/p direct packet access: test20 (x += pkt_ptr, 1) OK (NOTE: not executed due to unknown alignment)
+#346/p direct packet access: test21 (x += pkt_ptr, 2) OK (NOTE: not executed due to unknown alignment)
+#347/p direct packet access: test22 (x += pkt_ptr, 3) OK (NOTE: not executed due to unknown alignment)
+#348/p direct packet access: test23 (x += pkt_ptr, 4) OK
+#349/p direct packet access: test24 (x += pkt_ptr, 5) OK (NOTE: not executed due to unknown alignment)
+#350/p direct packet access: test25 (marking on <, good access) OK
+#351/p direct packet access: test26 (marking on <, bad access) OK
+#352/p direct packet access: test27 (marking on <=, good access) OK
+#353/p direct packet access: test28 (marking on <=, bad access) OK
+#354/p direct packet access: test29 (reg > pkt_end in subprog) OK
+#355/u direct stack access with 32-bit wraparound. test1 OK
+#355/p direct stack access with 32-bit wraparound. test1 OK
+#356/u direct stack access with 32-bit wraparound. test2 OK
+#356/p direct stack access with 32-bit wraparound. test2 OK
+#357/u direct stack access with 32-bit wraparound. test3 OK
+#357/p direct stack access with 32-bit wraparound. test3 OK
+#358/u direct map access, write test 1 OK
+#358/p direct map access, write test 1 OK
+#359/u direct map access, write test 2 OK
+#359/p direct map access, write test 2 OK
+#360/u direct map access, write test 3 OK
+#360/p direct map access, write test 3 OK
+#361/u direct map access, write test 4 OK
+#361/p direct map access, write test 4 OK
+#362/u direct map access, write test 5 OK
+#362/p direct map access, write test 5 OK
+#363/u direct map access, write test 6 FAIL
+Unexpected error message!
+    EXP: R1 min value is outside of the array range
+    RES: misaligned value access off (0x0; 0x0)+40+4 size 8
+verification time 236 usec
+stack depth 0
+processed 3 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned value access off (0x0; 0x0)+40+4 size 8
+verification time 236 usec
+stack depth 0
+processed 3 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#363/p direct map access, write test 6 FAIL
+Unexpected error message!
+    EXP: R1 min value is outside of the array range
+    RES: misaligned value access off (0x0; 0x0)+40+4 size 8
+verification time 177 usec
+stack depth 0
+processed 3 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned value access off (0x0; 0x0)+40+4 size 8
+verification time 177 usec
+stack depth 0
+processed 3 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#364/u direct map access, write test 7 OK
+#364/p direct map access, write test 7 OK
+#365/u direct map access, write test 8 OK
+#365/p direct map access, write test 8 OK
+#366/u direct map access, write test 9 OK
+#366/p direct map access, write test 9 OK
+#367/u direct map access, write test 10 OK
+#367/p direct map access, write test 10 OK
+#368/u direct map access, write test 11 OK
+#368/p direct map access, write test 11 OK
+#369/u direct map access, write test 12 OK
+#369/p direct map access, write test 12 OK
+#370/u direct map access, write test 13 OK
+#370/p direct map access, write test 13 OK
+#371/u direct map access, write test 14 OK
+#371/p direct map access, write test 14 OK
+#372/u direct map access, write test 15 OK
+#372/p direct map access, write test 15 OK
+#373/u direct map access, write test 16 FAIL
+Unexpected error message!
+    EXP: invalid access to map value, value_size=48 off=47 size=2
+    RES: misaligned value access off (0x0; 0x0)+47+0 size 2
+verification time 237 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned value access off (0x0; 0x0)+47+0 size 2
+verification time 237 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#373/p direct map access, write test 16 FAIL
+Unexpected error message!
+    EXP: invalid access to map value, value_size=48 off=47 size=2
+    RES: misaligned value access off (0x0; 0x0)+47+0 size 2
+verification time 116 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned value access off (0x0; 0x0)+47+0 size 2
+verification time 116 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#374/u direct map access, write test 17 FAIL
+Unexpected error message!
+    EXP: invalid access to map value, value_size=48 off=47 size=2
+    RES: misaligned value access off (0x0; 0x0)+46+1 size 2
+verification time 94 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned value access off (0x0; 0x0)+46+1 size 2
+verification time 94 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#374/p direct map access, write test 17 FAIL
+Unexpected error message!
+    EXP: invalid access to map value, value_size=48 off=47 size=2
+    RES: misaligned value access off (0x0; 0x0)+46+1 size 2
+verification time 217 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned value access off (0x0; 0x0)+46+1 size 2
+verification time 217 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#375/u direct map access, write test 18 OK
+#375/p direct map access, write test 18 OK
+#376/u direct map access, write test 19 OK
+#376/p direct map access, write test 19 OK
+#377/u direct map access, write test 20 OK
+#377/p direct map access, write test 20 OK
+#378/u direct map access, invalid insn test 1 OK
+#378/p direct map access, invalid insn test 1 OK
+#379/u direct map access, invalid insn test 2 OK
+#379/p direct map access, invalid insn test 2 OK
+#380/u direct map access, invalid insn test 3 OK
+#380/p direct map access, invalid insn test 3 OK
+#381/u direct map access, invalid insn test 4 OK
+#381/p direct map access, invalid insn test 4 OK
+#382/u direct map access, invalid insn test 5 OK
+#382/p direct map access, invalid insn test 5 OK
+#383/u direct map access, invalid insn test 6 OK
+#383/p direct map access, invalid insn test 6 OK
+#384/u direct map access, invalid insn test 7 OK
+#384/p direct map access, invalid insn test 7 OK
+#385/u direct map access, invalid insn test 8 OK
+#385/p direct map access, invalid insn test 8 OK
+#386/u direct map access, invalid insn test 9 OK
+#386/p direct map access, invalid insn test 9 OK
+#387/u DIV32 by 0, zero check 1 OK
+#387/p DIV32 by 0, zero check 1 OK
+#388/u DIV32 by 0, zero check 2 OK
+#388/p DIV32 by 0, zero check 2 OK
+#389/u DIV64 by 0, zero check OK
+#389/p DIV64 by 0, zero check OK
+#390/u MOD32 by 0, zero check 1 OK
+#390/p MOD32 by 0, zero check 1 OK
+#391/u MOD32 by 0, zero check 2 OK
+#391/p MOD32 by 0, zero check 2 OK
+#392/u MOD64 by 0, zero check OK
+#392/p MOD64 by 0, zero check OK
+#393/p DIV32 by 0, zero check ok, cls OK
+#394/p DIV32 by 0, zero check 1, cls OK
+#395/p DIV32 by 0, zero check 2, cls OK
+#396/p DIV64 by 0, zero check, cls OK
+#397/p MOD32 by 0, zero check ok, cls OK
+#398/p MOD32 by 0, zero check 1, cls OK
+#399/p MOD32 by 0, zero check 2, cls OK
+#400/p MOD64 by 0, zero check 1, cls OK
+#401/p MOD64 by 0, zero check 2, cls OK
+#402/p DIV32 overflow, check 1 OK
+#403/p DIV32 overflow, check 2 OK
+#404/p DIV64 overflow, check 1 OK
+#405/p DIV64 overflow, check 2 OK
+#406/p MOD32 overflow, check 1 OK
+#407/p MOD32 overflow, check 2 OK
+#408/p MOD64 overflow, check 1 OK
+#409/p MOD64 overflow, check 2 OK
+#410/p perfevent for sockops OK
+#411/p perfevent for tc OK
+#412/p perfevent for lwt out OK
+#413/p perfevent for xdp OK
+#414/u perfevent for socket filter OK
+#414/p perfevent for socket filter OK
+#415/p perfevent for sk_skb OK
+#416/u perfevent for cgroup skb OK
+#416/p perfevent for cgroup skb OK
+#417/p helper access to variable memory: stack, bitwise AND + JMP, correct bounds SKIP (unsupported program type 5)
+#418/p helper access to variable memory: stack, bitwise AND, zero included SKIP (unsupported program type 5)
+#419/p helper access to variable memory: stack, bitwise AND + JMP, wrong max SKIP (unsupported program type 5)
+#420/p helper access to variable memory: stack, JMP, correct bounds SKIP (unsupported program type 5)
+#421/p helper access to variable memory: stack, JMP (signed), correct bounds SKIP (unsupported program type 5)
+#422/p helper access to variable memory: stack, JMP, bounds + offset SKIP (unsupported program type 5)
+#423/p helper access to variable memory: stack, JMP, wrong max SKIP (unsupported program type 5)
+#424/p helper access to variable memory: stack, JMP, no max check SKIP (unsupported program type 5)
+#425/p helper access to variable memory: stack, JMP, no min check SKIP (unsupported program type 5)
+#426/p helper access to variable memory: stack, JMP (signed), no min check SKIP (unsupported program type 5)
+#427/p helper access to variable memory: map, JMP, correct bounds SKIP (unsupported program type 5)
+#428/p helper access to variable memory: map, JMP, wrong max SKIP (unsupported program type 5)
+#429/p helper access to variable memory: map adjusted, JMP, correct bounds SKIP (unsupported program type 5)
+#430/p helper access to variable memory: map adjusted, JMP, wrong max SKIP (unsupported program type 5)
+#431/p helper access to variable memory: size = 0 allowed on NULL (ARG_PTR_TO_MEM_OR_NULL) OK
+#432/p helper access to variable memory: size > 0 not allowed on NULL (ARG_PTR_TO_MEM_OR_NULL) OK
+#433/p helper access to variable memory: size = 0 allowed on != NULL stack pointer (ARG_PTR_TO_MEM_OR_NULL) OK
+#434/p helper access to variable memory: size = 0 allowed on != NULL map pointer (ARG_PTR_TO_MEM_OR_NULL) OK
+#435/p helper access to variable memory: size possible = 0 allowed on != NULL stack pointer (ARG_PTR_TO_MEM_OR_NULL) OK
+#436/p helper access to variable memory: size possible = 0 allowed on != NULL map pointer (ARG_PTR_TO_MEM_OR_NULL) OK
+#437/p helper access to variable memory: size possible = 0 allowed on != NULL packet pointer (ARG_PTR_TO_MEM_OR_NULL) OK (NOTE: not executed due to unknown alignment)
+#438/p helper access to variable memory: size = 0 not allowed on NULL (!ARG_PTR_TO_MEM_OR_NULL) SKIP (unsupported program type 5)
+#439/p helper access to variable memory: size > 0 not allowed on NULL (!ARG_PTR_TO_MEM_OR_NULL) SKIP (unsupported program type 5)
+#440/p helper access to variable memory: size = 0 allowed on != NULL stack pointer (!ARG_PTR_TO_MEM_OR_NULL) SKIP (unsupported program type 5)
+#441/p helper access to variable memory: size = 0 allowed on != NULL map pointer (!ARG_PTR_TO_MEM_OR_NULL) SKIP (unsupported program type 5)
+#442/p helper access to variable memory: size possible = 0 allowed on != NULL stack pointer (!ARG_PTR_TO_MEM_OR_NULL) SKIP (unsupported program type 5)
+#443/p helper access to variable memory: size possible = 0 allowed on != NULL map pointer (!ARG_PTR_TO_MEM_OR_NULL) SKIP (unsupported program type 5)
+#444/p helper access to variable memory: 8 bytes leak SKIP (unsupported program type 5)
+#445/p helper access to variable memory: 8 bytes no leak (init memory) SKIP (unsupported program type 5)
+#446/p helper access to packet: test1, valid packet_ptr range OK
+#447/p helper access to packet: test2, unchecked packet_ptr OK
+#448/p helper access to packet: test3, variable add OK
+#449/p helper access to packet: test4, packet_ptr with bad range OK
+#450/p helper access to packet: test5, packet_ptr with too short range OK
+#451/p helper access to packet: test6, cls valid packet_ptr range OK
+#452/p helper access to packet: test7, cls unchecked packet_ptr OK
+#453/p helper access to packet: test8, cls variable add OK
+#454/p helper access to packet: test9, cls packet_ptr with bad range OK
+#455/p helper access to packet: test10, cls packet_ptr with too short range OK
+#456/p helper access to packet: test11, cls unsuitable helper 1 OK
+#457/p helper access to packet: test12, cls unsuitable helper 2 OK
+#458/p helper access to packet: test13, cls helper ok OK
+#459/p helper access to packet: test14, cls helper ok sub OK
+#460/p helper access to packet: test15, cls helper fail sub OK
+#461/p helper access to packet: test16, cls helper fail range 1 OK
+#462/p helper access to packet: test17, cls helper fail range 2 OK
+#463/p helper access to packet: test18, cls helper fail range 3 OK
+#464/p helper access to packet: test19, cls helper range zero OK
+#465/p helper access to packet: test20, pkt end as input OK
+#466/p helper access to packet: test21, wrong reg OK
+#467/p helper access to map: full range SKIP (unsupported program type 5)
+#468/p helper access to map: partial range SKIP (unsupported program type 5)
+#469/p helper access to map: empty range SKIP (unsupported program type 5)
+#470/p helper access to map: out-of-bound range SKIP (unsupported program type 5)
+#471/p helper access to map: negative range SKIP (unsupported program type 5)
+#472/p helper access to adjusted map (via const imm): full range SKIP (unsupported program type 5)
+#473/p helper access to adjusted map (via const imm): partial range SKIP (unsupported program type 5)
+#474/p helper access to adjusted map (via const imm): empty range SKIP (unsupported program type 5)
+#475/p helper access to adjusted map (via const imm): out-of-bound range SKIP (unsupported program type 5)
+#476/p helper access to adjusted map (via const imm): negative range (> adjustment) SKIP (unsupported program type 5)
+#477/p helper access to adjusted map (via const imm): negative range (< adjustment) SKIP (unsupported program type 5)
+#478/p helper access to adjusted map (via const reg): full range SKIP (unsupported program type 5)
+#479/p helper access to adjusted map (via const reg): partial range SKIP (unsupported program type 5)
+#480/p helper access to adjusted map (via const reg): empty range SKIP (unsupported program type 5)
+#481/p helper access to adjusted map (via const reg): out-of-bound range SKIP (unsupported program type 5)
+#482/p helper access to adjusted map (via const reg): negative range (> adjustment) SKIP (unsupported program type 5)
+#483/p helper access to adjusted map (via const reg): negative range (< adjustment) SKIP (unsupported program type 5)
+#484/p helper access to adjusted map (via variable): full range SKIP (unsupported program type 5)
+#485/p helper access to adjusted map (via variable): partial range SKIP (unsupported program type 5)
+#486/p helper access to adjusted map (via variable): empty range SKIP (unsupported program type 5)
+#487/p helper access to adjusted map (via variable): no max check SKIP (unsupported program type 5)
+#488/p helper access to adjusted map (via variable): wrong max check SKIP (unsupported program type 5)
+#489/p helper access to map: bounds check using <, good access SKIP (unsupported program type 5)
+#490/p helper access to map: bounds check using <, bad access SKIP (unsupported program type 5)
+#491/p helper access to map: bounds check using <=, good access SKIP (unsupported program type 5)
+#492/p helper access to map: bounds check using <=, bad access SKIP (unsupported program type 5)
+#493/p helper access to map: bounds check using s<, good access SKIP (unsupported program type 5)
+#494/p helper access to map: bounds check using s<, good access 2 SKIP (unsupported program type 5)
+#495/p helper access to map: bounds check using s<, bad access SKIP (unsupported program type 5)
+#496/p helper access to map: bounds check using s<=, good access SKIP (unsupported program type 5)
+#497/p helper access to map: bounds check using s<=, good access 2 SKIP (unsupported program type 5)
+#498/p helper access to map: bounds check using s<=, bad access SKIP (unsupported program type 5)
+#499/p map lookup helper access to map SKIP (unsupported program type 5)
+#500/p map update helper access to map SKIP (unsupported program type 5)
+#501/p map update helper access to map: wrong size SKIP (unsupported program type 5)
+#502/p map helper access to adjusted map (via const imm) SKIP (unsupported program type 5)
+#503/p map helper access to adjusted map (via const imm): out-of-bound 1 SKIP (unsupported program type 5)
+#504/p map helper access to adjusted map (via const imm): out-of-bound 2 SKIP (unsupported program type 5)
+#505/p map helper access to adjusted map (via const reg) SKIP (unsupported program type 5)
+#506/p map helper access to adjusted map (via const reg): out-of-bound 1 SKIP (unsupported program type 5)
+#507/p map helper access to adjusted map (via const reg): out-of-bound 2 SKIP (unsupported program type 5)
+#508/p map helper access to adjusted map (via variable) SKIP (unsupported program type 5)
+#509/p map helper access to adjusted map (via variable): no max check SKIP (unsupported program type 5)
+#510/p map helper access to adjusted map (via variable): wrong max check SKIP (unsupported program type 5)
+#511/p ARG_PTR_TO_LONG uninitialized OK
+#512/p ARG_PTR_TO_LONG half-uninitialized OK
+#513/p ARG_PTR_TO_LONG misaligned OK
+#514/p ARG_PTR_TO_LONG size < sizeof(long) OK
+#515/p ARG_PTR_TO_LONG initialized OK
+#516/u jit: lsh, rsh, arsh by 1 OK
+#516/p jit: lsh, rsh, arsh by 1 OK
+#517/u jit: mov32 for ldimm64, 1 OK
+#517/p jit: mov32 for ldimm64, 1 OK
+#518/u jit: mov32 for ldimm64, 2 OK
+#518/p jit: mov32 for ldimm64, 2 OK
+#519/u jit: various mul tests OK
+#519/p jit: various mul tests OK
+#520/u jit: jsgt, jslt OK
+#520/p jit: jsgt, jslt OK
+#521/p jset32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#522/p jset32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#523/u jset32: min/max deduction OK
+#523/p jset32: min/max deduction OK
+#524/p jeq32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#525/p jeq32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#526/u jeq32: min/max deduction OK
+#526/p jeq32: min/max deduction OK
+#527/p jne32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#528/p jne32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#529/u jne32: min/max deduction OK
+#529/p jne32: min/max deduction OK
+#530/p jge32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#531/p jge32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#532/u jge32: min/max deduction OK
+#532/p jge32: min/max deduction OK
+#533/p jgt32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#534/p jgt32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#535/u jgt32: min/max deduction OK
+#535/p jgt32: min/max deduction OK
+#536/p jle32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#537/p jle32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#538/u jle32: min/max deduction OK
+#538/p jle32: min/max deduction OK
+#539/p jlt32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#540/p jlt32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#541/u jlt32: min/max deduction OK
+#541/p jlt32: min/max deduction OK
+#542/p jsge32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#543/p jsge32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#544/u jsge32: min/max deduction OK
+#544/p jsge32: min/max deduction OK
+#545/p jsgt32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#546/p jsgt32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#547/u jsgt32: min/max deduction OK
+#547/p jsgt32: min/max deduction OK
+#548/p jsle32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#549/p jsle32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#550/u jsle32: min/max deduction OK
+#550/p jsle32: min/max deduction OK
+#551/p jslt32: BPF_K OK (NOTE: not executed due to unknown alignment)
+#552/p jslt32: BPF_X OK (NOTE: not executed due to unknown alignment)
+#553/u jslt32: min/max deduction OK
+#553/p jslt32: min/max deduction OK
+#554/p jgt32: range bound deduction, reg op imm OK (NOTE: not executed due to unknown alignment)
+#555/p jgt32: range bound deduction, reg1 op reg2, reg1 unknown OK (NOTE: not executed due to unknown alignment)
+#556/p jle32: range bound deduction, reg1 op reg2, reg2 unknown OK (NOTE: not executed due to unknown alignment)
+#557/p jset: functional OK (NOTE: not executed due to unknown alignment)
+#558/p jset: sign-extend OK (NOTE: not executed due to unknown alignment)
+#559/u jset: known const compare OK
+#559/p jset: known const compare OK
+#560/u jset: known const compare bad OK
+#560/p jset: known const compare bad OK
+#561/u jset: unknown const compare taken OK
+#561/p jset: unknown const compare taken OK
+#562/u jset: unknown const compare not taken OK
+#562/p jset: unknown const compare not taken OK
+#563/u jset: half-known const compare OK
+#563/p jset: half-known const compare OK
+#564/u jset: range OK
+#564/p jset: range OK
+#565/u jump test 1 OK
+#565/p jump test 1 OK
+#566/u jump test 2 OK
+#566/p jump test 2 OK
+#567/u jump test 3 OK
+#567/p jump test 3 OK
+#568/u jump test 4 OK
+#568/p jump test 4 OK
+#569/u jump test 5 OK
+#569/p jump test 5 OK
+#570/u jump test 6 OK
+#570/p jump test 6 OK
+#571/u jump test 7 OK
+#571/p jump test 7 OK
+#572/u jump test 8 OK
+#572/p jump test 8 OK
+#573/p jump/call test 9 OK
+#574/p jump/call test 10 OK
+#575/p jump/call test 11 OK
+#576/u junk insn OK
+#576/p junk insn OK
+#577/u junk insn2 OK
+#577/p junk insn2 OK
+#578/u junk insn3 OK
+#578/p junk insn3 OK
+#579/u junk insn4 OK
+#579/p junk insn4 OK
+#580/u junk insn5 OK
+#580/p junk insn5 OK
+#581/u ld_abs: check calling conv, r1 OK
+#581/p ld_abs: check calling conv, r1 OK
+#582/u ld_abs: check calling conv, r2 OK
+#582/p ld_abs: check calling conv, r2 OK
+#583/u ld_abs: check calling conv, r3 OK
+#583/p ld_abs: check calling conv, r3 OK
+#584/u ld_abs: check calling conv, r4 OK
+#584/p ld_abs: check calling conv, r4 OK
+#585/u ld_abs: check calling conv, r5 OK
+#585/p ld_abs: check calling conv, r5 OK
+#586/u ld_abs: check calling conv, r7 OK
+#586/p ld_abs: check calling conv, r7 OK
+#587/p ld_abs: tests on r6 and skb data reload helper OK
+#588/p ld_abs: invalid op 1 OK
+#589/p ld_abs: invalid op 2 OK
+#590/p ld_abs: nmap reduced OK
+#591/p ld_abs: div + abs, test 1 OK
+#592/p ld_abs: div + abs, test 2 OK
+#593/p ld_abs: div + abs, test 3 OK
+#594/p ld_abs: div + abs, test 4 OK
+#595/p ld_abs: vlan + abs, test 1 OK
+#596/p ld_abs: vlan + abs, test 2 OK
+#597/p ld_abs: jump around ld_abs OK
+#598/p ld_dw: xor semi-random 64 bit imms, test 1 OK
+#599/p ld_dw: xor semi-random 64 bit imms, test 2 OK
+#600/p ld_dw: xor semi-random 64 bit imms, test 3 OK
+#601/p ld_dw: xor semi-random 64 bit imms, test 4 OK
+[  248.922453] vmap allocation for size 40005632 failed: use vmalloc=<size> to increase size
+[  248.922745] test_verifier: vmalloc: allocation failure: 39999960 bytes, mode:0xdc0(GFP_KERNEL|__GFP_ZERO), nodemask=(null)
+[  248.923073] CPU: 0 PID: 127 Comm: test_verifier Not tainted 5.6.0-rc1-00335-g74e384956020 #3
+[  248.923316] Call Trace:
+[  248.923437] [<c0031c16>] walk_stackframe+0x0/0xa6
+[  248.923584] [<c0031d78>] show_stack+0x28/0x32
+[  248.923737] [<c05fb0be>] dump_stack+0x6c/0x86
+[  248.923888] [<c0108c0a>] warn_alloc+0x9c/0xf0
+[  248.924040] [<c0103f7e>] __vmalloc_node_range+0x138/0x1c4
+[  248.924203] [<c01040b0>] vzalloc+0x26/0x2e
+[  248.924341] [<c00b6fd0>] bpf_patch_insn_data+0x84/0x17e
+[  248.924503] [<c00c01d4>] bpf_check+0x132e/0x1f58
+[  248.924651] [<c00b0c3a>] bpf_prog_load+0x3d2/0x58e
+[  248.924828] [<c00b2488>] __do_sys_bpf+0x4d2/0x123e
+[  248.924980] [<c00b3846>] sys_bpf+0xc/0x14
+[  248.925116] [<c0030b2e>] ret_from_syscall+0x0/0x2
+[  248.925284] Mem-Info:
+[  248.925666] active_anon:2471 inactive_anon:5 isolated_anon:0
+[  248.925666]  active_file:701 inactive_file:5048 isolated_file:0
+[  248.925666]  unevictable:0 dirty:6 writeback:0 unstable:0
+[  248.925666]  slab_reclaimable:100 slab_unreclaimable:903
+[  248.925666]  mapped:5175 shmem:24 pagetables:26 bounce:0
+[  248.925666]  free:234346 free_pcp:360 free_cma:0
+[  248.926435] Node 0 active_anon:9884kB inactive_anon:20kB active_file:2804kB inactive_file:20192kB unevictable:0kB isolated(anon):0kB isolated(file):0kB mapped:20700kB dirty:24kB writeback:0kB shmem:96kB writeback_tmp:0kB unstable:0kB all_unreclaimable? no
+[  248.926986] Normal free:937384kB min:4060kB low:5088kB high:6116kB reserved_highatomic:0KB active_anon:9884kB inactive_anon:20kB active_file:2804kB inactive_file:20192kB unevictable:0kB writepending:24kB present:1048576kB managed:1031236kB mlocked:0kB kernel_stack:336kB pagetables:104kB bounce:0kB free_pcp:1440kB local_pcp:1440kB free_cma:0kB
+[  248.927711] lowmem_reserve[]: 0 0
+[  248.927835] Normal: 0*4kB 3*8kB (UE) 3*16kB (UM) 3*32kB (UME) 2*64kB (UE) 5*128kB (UME) 4*256kB (UME) 3*512kB (UM) 2*1024kB (UE) 5*2048kB (UME) 225*4096kB (UM) = 937384kB
+[  248.928243] 5773 total pagecache pages
+[  248.928368] 0 pages in swap cache
+[  248.928483] Swap cache stats: add 0, delete 0, find 0/0
+[  248.928652] Free swap  = 0kB
+[  248.928779] Total swap = 0kB
+[  248.928887] 262144 pages RAM
+[  248.928992] 0 pages HighMem/MovableOnly
+[  248.929136] 4335 pages reserved
+#602/p ld_dw: xor semi-random 64 bit imms, test 5 FAIL
+Failed to load prog 'Success'!
+verification time 1007848 usec
+stack depth 0
+processed 666667 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#603/u test1 ld_imm64 OK
+#603/p test1 ld_imm64 OK
+#604/u test2 ld_imm64 OK
+#604/p test2 ld_imm64 OK
+#605/u test3 ld_imm64 OK
+#605/p test3 ld_imm64 OK
+#606/u test4 ld_imm64 OK
+#606/p test4 ld_imm64 OK
+#607/u test5 ld_imm64 OK
+#607/p test5 ld_imm64 OK
+#608/u test6 ld_imm64 OK
+#608/p test6 ld_imm64 OK
+#609/u test7 ld_imm64 OK
+#609/p test7 ld_imm64 OK
+#610/u test8 ld_imm64 OK
+#610/p test8 ld_imm64 OK
+#611/u test9 ld_imm64 OK
+#611/p test9 ld_imm64 OK
+#612/u test10 ld_imm64 OK
+#612/p test10 ld_imm64 OK
+#613/u test11 ld_imm64 OK
+#613/p test11 ld_imm64 OK
+#614/u test12 ld_imm64 OK
+#614/p test12 ld_imm64 OK
+#615/u test13 ld_imm64 OK
+#615/p test13 ld_imm64 OK
+#616/u test14 ld_imm64: reject 2nd imm != 0 OK
+#616/p test14 ld_imm64: reject 2nd imm != 0 OK
+#617/u ld_ind: check calling conv, r1 OK
+#617/p ld_ind: check calling conv, r1 OK
+#618/u ld_ind: check calling conv, r2 OK
+#618/p ld_ind: check calling conv, r2 OK
+#619/u ld_ind: check calling conv, r3 OK
+#619/p ld_ind: check calling conv, r3 OK
+#620/u ld_ind: check calling conv, r4 OK
+#620/p ld_ind: check calling conv, r4 OK
+#621/u ld_ind: check calling conv, r5 OK
+#621/p ld_ind: check calling conv, r5 OK
+#622/u ld_ind: check calling conv, r7 OK
+#622/p ld_ind: check calling conv, r7 OK
+#623/u leak pointer into ctx 1 OK
+#623/p leak pointer into ctx 1 OK
+#624/u leak pointer into ctx 2 OK
+#624/p leak pointer into ctx 2 OK
+#625/u leak pointer into ctx 3 OK
+#625/p leak pointer into ctx 3 OK
+#626/u leak pointer into map val OK
+#626/p leak pointer into map val OK
+#627/p bounded loop, count to 4 SKIP (unsupported program type 5)
+#628/p bounded loop, count to 20 SKIP (unsupported program type 5)
+#629/p bounded loop, count from positive unknown to 4 SKIP (unsupported program type 5)
+#630/p bounded loop, count from totally unknown to 4 SKIP (unsupported program type 5)
+#631/p bounded loop, count to 4 with equality SKIP (unsupported program type 5)
+#632/p bounded loop, start in the middle SKIP (unsupported program type 5)
+#633/p bounded loop containing a forward jump SKIP (unsupported program type 5)
+#634/p bounded loop that jumps out rather than in SKIP (unsupported program type 5)
+#635/p infinite loop after a conditional jump SKIP (unsupported program type 5)
+#636/p bounded recursion SKIP (unsupported program type 5)
+#637/p infinite loop in two jumps SKIP (unsupported program type 5)
+#638/p infinite loop: three-jump trick SKIP (unsupported program type 5)
+#639/p not-taken loop with back jump to 1st insn OK
+#640/p taken loop with back jump to 1st insn OK
+#641/p taken loop with back jump to 1st insn, 2 OK
+#642/p invalid direct packet write for LWT_IN OK
+#643/p invalid direct packet write for LWT_OUT OK
+#644/p direct packet write for LWT_XMIT OK
+#645/p direct packet read for LWT_IN OK
+#646/p direct packet read for LWT_OUT OK
+#647/p direct packet read for LWT_XMIT OK
+#648/p overlapping checks for direct packet access OK
+#649/p make headroom for LWT_XMIT OK
+#650/u invalid access of tc_classid for LWT_IN OK
+#650/p invalid access of tc_classid for LWT_IN OK
+#651/u invalid access of tc_classid for LWT_OUT OK
+#651/p invalid access of tc_classid for LWT_OUT OK
+#652/u invalid access of tc_classid for LWT_XMIT OK
+#652/p invalid access of tc_classid for LWT_XMIT OK
+#653/p check skb->tc_classid half load not permitted for lwt prog OK
+#654/u map in map access OK
+#654/p map in map access OK
+#655/u invalid inner map pointer OK
+#655/p invalid inner map pointer OK
+#656/u forgot null checking on the inner map pointer OK
+#656/p forgot null checking on the inner map pointer OK
+#657/p calls: two calls returning different map pointers for lookup (hash, array) OK
+#658/p calls: two calls returning different map pointers for lookup (hash, map in map) OK
+#659/u cond: two branches returning different map pointers for lookup (tail, tail) OK
+#659/p cond: two branches returning different map pointers for lookup (tail, tail) OK
+#660/u cond: two branches returning same map pointers for lookup (tail, tail) OK
+#660/p cond: two branches returning same map pointers for lookup (tail, tail) OK
+#661/u invalid map_fd for function call OK
+#661/p invalid map_fd for function call OK
+#662/u don't check return value before access OK
+#662/p don't check return value before access OK
+#663/u access memory with incorrect alignment OK
+#663/p access memory with incorrect alignment OK
+#664/u sometimes access memory with incorrect alignment OK
+#664/p sometimes access memory with incorrect alignment OK
+#665/u masking, test out of bounds 1 OK
+#665/p masking, test out of bounds 1 OK
+#666/u masking, test out of bounds 2 OK
+#666/p masking, test out of bounds 2 OK
+#667/u masking, test out of bounds 3 OK
+#667/p masking, test out of bounds 3 OK
+#668/u masking, test out of bounds 4 OK
+#668/p masking, test out of bounds 4 OK
+#669/u masking, test out of bounds 5 OK
+#669/p masking, test out of bounds 5 OK
+#670/u masking, test out of bounds 6 OK
+#670/p masking, test out of bounds 6 OK
+#671/u masking, test out of bounds 7 OK
+#671/p masking, test out of bounds 7 OK
+#672/u masking, test out of bounds 8 OK
+#672/p masking, test out of bounds 8 OK
+#673/u masking, test out of bounds 9 OK
+#673/p masking, test out of bounds 9 OK
+#674/u masking, test out of bounds 10 OK
+#674/p masking, test out of bounds 10 OK
+#675/u masking, test out of bounds 11 OK
+#675/p masking, test out of bounds 11 OK
+#676/u masking, test out of bounds 12 OK
+#676/p masking, test out of bounds 12 OK
+#677/u masking, test in bounds 1 OK
+#677/p masking, test in bounds 1 OK
+#678/u masking, test in bounds 2 OK
+#678/p masking, test in bounds 2 OK
+#679/u masking, test in bounds 3 OK
+#679/p masking, test in bounds 3 OK
+#680/u masking, test in bounds 4 OK
+#680/p masking, test in bounds 4 OK
+#681/u masking, test in bounds 5 OK
+#681/p masking, test in bounds 5 OK
+#682/u masking, test in bounds 6 OK
+#682/p masking, test in bounds 6 OK
+#683/u masking, test in bounds 7 OK
+#683/p masking, test in bounds 7 OK
+#684/u masking, test in bounds 8 OK
+#684/p masking, test in bounds 8 OK
+#685/p meta access, test1 OK
+#686/p meta access, test2 OK
+#687/p meta access, test3 OK
+#688/p meta access, test4 OK
+#689/p meta access, test5 OK
+#690/p meta access, test6 OK
+#691/p meta access, test7 OK
+#692/p meta access, test8 OK
+#693/p meta access, test9 OK
+#694/p meta access, test10 OK
+#695/p meta access, test11 OK
+#696/p meta access, test12 OK
+#697/p check bpf_perf_event_data->sample_period byte load permitted SKIP (unsupported program type 7)
+#698/p check bpf_perf_event_data->sample_period half load permitted SKIP (unsupported program type 7)
+#699/p check bpf_perf_event_data->sample_period word load permitted SKIP (unsupported program type 7)
+#700/p check bpf_perf_event_data->sample_period dword load permitted SKIP (unsupported program type 7)
+#701/p precise: test 1 SKIP (unsupported program type 5)
+#702/p precise: test 2 SKIP (unsupported program type 5)
+#703/p precise: cross frame pruning OK
+#704/p precise: ST insn causing spi > allocated_stack OK
+#705/p precise: STX insn causing spi > allocated_stack OK
+#706/p prevent map lookup in sockmap SKIP (unsupported map type 15)
+#707/p prevent map lookup in sockhash SKIP (unsupported map type 18)
+#708/p prevent map lookup in stack trace SKIP (unsupported map type 7)
+#709/u prevent map lookup in prog array OK
+#709/p prevent map lookup in prog array OK
+#710/p raw_stack: no skb_load_bytes OK
+#711/p raw_stack: skb_load_bytes, negative len OK
+#712/p raw_stack: skb_load_bytes, negative len 2 OK
+#713/p raw_stack: skb_load_bytes, zero len OK
+#714/p raw_stack: skb_load_bytes, no init OK
+#715/p raw_stack: skb_load_bytes, init OK
+#716/p raw_stack: skb_load_bytes, spilled regs around bounds OK
+#717/p raw_stack: skb_load_bytes, spilled regs corruption OK
+#718/p raw_stack: skb_load_bytes, spilled regs corruption 2 OK
+#719/p raw_stack: skb_load_bytes, spilled regs + data OK
+#720/p raw_stack: skb_load_bytes, invalid access 1 OK
+#721/p raw_stack: skb_load_bytes, invalid access 2 OK
+#722/p raw_stack: skb_load_bytes, invalid access 3 OK
+#723/p raw_stack: skb_load_bytes, invalid access 4 OK
+#724/p raw_stack: skb_load_bytes, invalid access 5 OK
+#725/p raw_stack: skb_load_bytes, invalid access 6 OK
+#726/p raw_stack: skb_load_bytes, large access OK
+#727/p raw_tracepoint_writable: reject variable offset SKIP (unsupported program type 24)
+#728/p reference tracking: leak potential reference OK
+#729/p reference tracking: leak potential reference to sock_common OK
+#730/p reference tracking: leak potential reference on stack OK
+#731/p reference tracking: leak potential reference on stack 2 OK
+#732/p reference tracking: zero potential reference OK
+#733/p reference tracking: zero potential reference to sock_common OK
+#734/p reference tracking: copy and zero potential references OK
+#735/p reference tracking: release reference without check OK
+#736/p reference tracking: release reference to sock_common without check OK
+#737/p reference tracking: release reference OK
+#738/p reference tracking: release reference to sock_common OK
+#739/p reference tracking: release reference 2 OK
+#740/p reference tracking: release reference twice OK
+#741/p reference tracking: release reference twice inside branch OK
+#742/p reference tracking: alloc, check, free in one subbranch OK
+#743/p reference tracking: alloc, check, free in both subbranches OK (NOTE: not executed due to unknown alignment)
+#744/p reference tracking in call: free reference in subprog OK
+#745/p reference tracking in call: free reference in subprog and outside OK
+#746/p reference tracking in call: alloc & leak reference in subprog OK
+#747/p reference tracking in call: alloc in subprog, release outside OK
+#748/p reference tracking in call: sk_ptr leak into caller stack OK
+#749/p reference tracking in call: sk_ptr spill into caller stack OK
+#750/p reference tracking: allow LD_ABS OK
+#751/p reference tracking: forbid LD_ABS while holding reference OK
+#752/p reference tracking: allow LD_IND OK
+#753/p reference tracking: forbid LD_IND while holding reference OK
+#754/p reference tracking: check reference or tail call OK
+#755/p reference tracking: release reference then tail call OK
+#756/p reference tracking: leak possible reference over tail call OK
+#757/p reference tracking: leak checked reference over tail call OK
+#758/p reference tracking: mangle and release sock_or_null OK
+#759/p reference tracking: mangle and release sock OK
+#760/p reference tracking: access member OK
+#761/p reference tracking: write to member OK
+#762/p reference tracking: invalid 64-bit access of member OK
+#763/p reference tracking: access after release OK
+#764/p reference tracking: direct access for lookup OK
+#765/p reference tracking: use ptr from bpf_tcp_sock() after release FAIL
+Unexpected error message!
+    EXP: invalid mem access
+    RES: misaligned access off (0x0; 0xffffffffffffffff)+0+0 size 4
+verification time 174 usec
+stack depth 48
+processed 26 insns (limit 1000000) max_states_per_insn 0 total_states 2 peak_states 2 mark_read 1
+
+misaligned access off (0x0; 0xffffffffffffffff)+0+0 size 4
+verification time 174 usec
+stack depth 48
+processed 26 insns (limit 1000000) max_states_per_insn 0 total_states 2 peak_states 2 mark_read 1
+#766/p reference tracking: use ptr from bpf_sk_fullsock() after release FAIL
+Unexpected error message!
+    EXP: invalid mem access
+    RES: misaligned access off (0x0; 0xffffffffffffffff)+0+8 size 4
+verification time 374 usec
+stack depth 48
+processed 26 insns (limit 1000000) max_states_per_insn 0 total_states 2 peak_states 2 mark_read 1
+
+misaligned access off (0x0; 0xffffffffffffffff)+0+8 size 4
+verification time 374 usec
+stack depth 48
+processed 26 insns (limit 1000000) max_states_per_insn 0 total_states 2 peak_states 2 mark_read 1
+#767/p reference tracking: use ptr from bpf_sk_fullsock(tp) after release FAIL
+Unexpected error message!
+    EXP: invalid mem access
+    RES: misaligned access off (0x0; 0xffffffffffffffff)+0+8 size 4
+verification time 188 usec
+stack depth 48
+processed 30 insns (limit 1000000) max_states_per_insn 0 total_states 2 peak_states 2 mark_read 1
+
+misaligned access off (0x0; 0xffffffffffffffff)+0+8 size 4
+verification time 188 usec
+stack depth 48
+processed 30 insns (limit 1000000) max_states_per_insn 0 total_states 2 peak_states 2 mark_read 1
+#768/p reference tracking: use sk after bpf_sk_release(tp) FAIL
+Unexpected error message!
+    EXP: invalid mem access
+    RES: misaligned access off (0x0; 0xffffffffffffffff)+0+8 size 4
+verification time 170 usec
+stack depth 48
+processed 25 insns (limit 1000000) max_states_per_insn 0 total_states 2 peak_states 2 mark_read 1
+
+misaligned access off (0x0; 0xffffffffffffffff)+0+8 size 4
+verification time 170 usec
+stack depth 48
+processed 25 insns (limit 1000000) max_states_per_insn 0 total_states 2 peak_states 2 mark_read 1
+#769/p reference tracking: use ptr from bpf_get_listener_sock() after bpf_sk_release(sk) OK
+#770/p reference tracking: bpf_sk_release(listen_sk) OK
+#771/p reference tracking: tp->snd_cwnd after bpf_sk_fullsock(sk) and bpf_tcp_sock(sk) OK
+#772/u runtime/jit: tail_call within bounds, prog once OK
+#772/p runtime/jit: tail_call within bounds, prog once OK
+#773/u runtime/jit: tail_call within bounds, prog loop OK
+#773/p runtime/jit: tail_call within bounds, prog loop OK
+#774/u runtime/jit: tail_call within bounds, no prog OK
+#774/p runtime/jit: tail_call within bounds, no prog OK
+#775/u runtime/jit: tail_call within bounds, key 2 OK
+#775/p runtime/jit: tail_call within bounds, key 2 OK
+[  249.630381] bpf-jit: offset=4312 not supported
+#776/u runtime/jit: tail_call within bounds, key 2 / key 2, first branch FAIL
+Failed to load prog 'Success'!
+verification time 203 usec
+stack depth 0
+processed 13 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#776/p runtime/jit: tail_call within bounds, key 2 / key 2, first branch OK
+[  249.639669] bpf-jit: offset=4308 not supported
+#777/u runtime/jit: tail_call within bounds, key 2 / key 2, second branch FAIL
+Failed to load prog 'Success'!
+verification time 175 usec
+stack depth 0
+processed 13 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#777/p runtime/jit: tail_call within bounds, key 2 / key 2, second branch OK
+[  249.648696] bpf-jit: offset=4120 not supported
+#778/u runtime/jit: tail_call within bounds, key 0 / key 2, first branch FAIL
+Failed to load prog 'Success'!
+verification time 161 usec
+stack depth 0
+processed 15 insns (limit 1000000) max_states_per_insn 1 total_states 1 peak_states 1 mark_read 1
+#778/p runtime/jit: tail_call within bounds, key 0 / key 2, first branch OK
+[  249.658266] bpf-jit: offset=4128 not supported
+#779/u runtime/jit: tail_call within bounds, key 0 / key 2, second branch FAIL
+Failed to load prog 'Success'!
+verification time 165 usec
+stack depth 0
+processed 15 insns (limit 1000000) max_states_per_insn 1 total_states 1 peak_states 1 mark_read 1
+#779/p runtime/jit: tail_call within bounds, key 0 / key 2, second branch OK
+#780/u runtime/jit: tail_call within bounds, different maps, first branch OK
+#780/p runtime/jit: tail_call within bounds, different maps, first branch OK
+#781/u runtime/jit: tail_call within bounds, different maps, second branch OK
+#781/p runtime/jit: tail_call within bounds, different maps, second branch OK
+#782/u runtime/jit: tail_call out of bounds OK
+#782/p runtime/jit: tail_call out of bounds OK
+#783/u runtime/jit: pass negative index to tail_call OK
+#783/p runtime/jit: pass negative index to tail_call OK
+#784/u runtime/jit: pass > 32bit index to tail_call OK
+#784/p runtime/jit: pass > 32bit index to tail_call OK
+#785/p scale: scale test 1 OK
+#786/p scale: scale test 2 OK
+#787/u pointer/scalar confusion in state equality check (way 1) OK
+#787/p pointer/scalar confusion in state equality check (way 1) OK
+#788/u pointer/scalar confusion in state equality check (way 2) OK
+#788/p pointer/scalar confusion in state equality check (way 2) OK
+#789/p liveness pruning and write screening OK
+#790/u varlen_map_value_access pruning FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: R0 !read_ok
+verification time 286 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+R0 !read_ok
+verification time 286 usec
+stack depth 0
+processed 4 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#790/p varlen_map_value_access pruning OK
+#791/p search pruning: all branches should be verified (nop operation) SKIP (unsupported program type 5)
+#792/p search pruning: all branches should be verified (invalid stack access) SKIP (unsupported program type 5)
+#793/u allocated_stack OK
+#793/p allocated_stack OK
+#794/u skb->sk: no NULL check OK
+#794/p skb->sk: no NULL check OK
+#795/u skb->sk: sk->family [non fullsock field] OK
+#795/p skb->sk: sk->family [non fullsock field] OK
+#796/u skb->sk: sk->type [fullsock field] OK
+#796/p skb->sk: sk->type [fullsock field] OK
+#797/u bpf_sk_fullsock(skb->sk): no !skb->sk check OK
+#797/p bpf_sk_fullsock(skb->sk): no !skb->sk check OK
+#798/u sk_fullsock(skb->sk): no NULL check on ret OK
+#798/p sk_fullsock(skb->sk): no NULL check on ret OK
+#799/u sk_fullsock(skb->sk): sk->type [fullsock field] OK
+#799/p sk_fullsock(skb->sk): sk->type [fullsock field] OK
+#800/u sk_fullsock(skb->sk): sk->family [non fullsock field] OK
+#800/p sk_fullsock(skb->sk): sk->family [non fullsock field] OK
+#801/u sk_fullsock(skb->sk): sk->state [narrow load] OK
+#801/p sk_fullsock(skb->sk): sk->state [narrow load] OK
+#802/u sk_fullsock(skb->sk): sk->dst_port [narrow load] OK
+#802/p sk_fullsock(skb->sk): sk->dst_port [narrow load] OK
+#803/u sk_fullsock(skb->sk): sk->dst_port [load 2nd byte] OK
+#803/p sk_fullsock(skb->sk): sk->dst_port [load 2nd byte] OK
+#804/u sk_fullsock(skb->sk): sk->dst_ip6 [load 2nd byte] OK
+#804/p sk_fullsock(skb->sk): sk->dst_ip6 [load 2nd byte] OK
+#805/u sk_fullsock(skb->sk): sk->type [narrow load] OK
+#805/p sk_fullsock(skb->sk): sk->type [narrow load] OK
+#806/u sk_fullsock(skb->sk): sk->protocol [narrow load] OK
+#806/p sk_fullsock(skb->sk): sk->protocol [narrow load] OK
+#807/u sk_fullsock(skb->sk): beyond last field OK
+#807/p sk_fullsock(skb->sk): beyond last field OK
+#808/u bpf_tcp_sock(skb->sk): no !skb->sk check OK
+#808/p bpf_tcp_sock(skb->sk): no !skb->sk check OK
+#809/u bpf_tcp_sock(skb->sk): no NULL check on ret OK
+#809/p bpf_tcp_sock(skb->sk): no NULL check on ret OK
+#810/u bpf_tcp_sock(skb->sk): tp->snd_cwnd OK
+#810/p bpf_tcp_sock(skb->sk): tp->snd_cwnd OK
+#811/u bpf_tcp_sock(skb->sk): tp->bytes_acked OK
+#811/p bpf_tcp_sock(skb->sk): tp->bytes_acked OK
+#812/u bpf_tcp_sock(skb->sk): beyond last field OK
+#812/p bpf_tcp_sock(skb->sk): beyond last field OK
+#813/u bpf_tcp_sock(bpf_sk_fullsock(skb->sk)): tp->snd_cwnd OK
+#813/p bpf_tcp_sock(bpf_sk_fullsock(skb->sk)): tp->snd_cwnd OK
+#814/p bpf_sk_release(skb->sk) OK
+#815/p bpf_sk_release(bpf_sk_fullsock(skb->sk)) OK
+#816/p bpf_sk_release(bpf_tcp_sock(skb->sk)) OK
+#817/p sk_storage_get(map, skb->sk, NULL, 0): value == NULL OK
+#818/p sk_storage_get(map, skb->sk, 1, 1): value == 1 OK
+#819/p sk_storage_get(map, skb->sk, &stack_value, 1): stack_value OK
+#820/p sk_storage_get(map, skb->sk, &stack_value, 1): partially init stack_value OK
+#821/p bpf_map_lookup_elem(smap, &key) OK
+#822/p bpf_map_lookup_elem(xskmap, &key); xs->queue_id SKIP (unsupported map type 17)
+#823/u check valid spill/fill OK
+#823/p check valid spill/fill OK
+#824/u check valid spill/fill, skb mark OK
+#824/p check valid spill/fill, skb mark OK
+#825/u check corrupted spill/fill FAIL
+Unexpected error message!
+    EXP: attempt to corrupt spilled
+    RES: verification time 291 usec
+stack depth 8
+processed 5 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+verification time 291 usec
+stack depth 8
+processed 5 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#825/p check corrupted spill/fill OK
+#826/u check corrupted spill/fill, LSB OK
+#826/p check corrupted spill/fill, LSB OK
+#827/u check corrupted spill/fill, MSB OK
+#827/p check corrupted spill/fill, MSB OK
+#828/u spin_lock: test1 success OK
+#828/p spin_lock: test1 success OK
+#829/u spin_lock: test2 direct ld/st OK
+#829/p spin_lock: test2 direct ld/st OK
+#830/u spin_lock: test3 direct ld/st OK
+#830/p spin_lock: test3 direct ld/st OK
+#831/u spin_lock: test4 direct ld/st OK
+#831/p spin_lock: test4 direct ld/st OK
+#832/u spin_lock: test5 call within a locked region OK
+#832/p spin_lock: test5 call within a locked region OK
+#833/u spin_lock: test6 missing unlock OK
+#833/p spin_lock: test6 missing unlock OK
+#834/u spin_lock: test7 unlock without lock OK
+#834/p spin_lock: test7 unlock without lock OK
+#835/u spin_lock: test8 double lock OK
+#835/p spin_lock: test8 double lock OK
+#836/u spin_lock: test9 different lock OK
+#836/p spin_lock: test9 different lock OK
+#837/u spin_lock: test10 lock in subprog without unlock OK
+#837/p spin_lock: test10 lock in subprog without unlock OK
+#838/p spin_lock: test11 ld_abs under lock OK
+#839/u PTR_TO_STACK store/load OK
+#839/p PTR_TO_STACK store/load OK
+#840/u PTR_TO_STACK store/load - bad alignment on off OK
+#840/p PTR_TO_STACK store/load - bad alignment on off OK
+#841/u PTR_TO_STACK store/load - bad alignment on reg OK
+#841/p PTR_TO_STACK store/load - bad alignment on reg OK
+#842/u PTR_TO_STACK store/load - out of bounds low OK
+#842/p PTR_TO_STACK store/load - out of bounds low OK
+#843/u PTR_TO_STACK store/load - out of bounds high OK
+#843/p PTR_TO_STACK store/load - out of bounds high OK
+#844/u PTR_TO_STACK check high 1 OK
+#844/p PTR_TO_STACK check high 1 OK
+#845/u PTR_TO_STACK check high 2 OK
+#845/p PTR_TO_STACK check high 2 OK
+#846/u PTR_TO_STACK check high 3 OK
+#846/p PTR_TO_STACK check high 3 OK
+#847/u PTR_TO_STACK check high 4 OK
+#847/p PTR_TO_STACK check high 4 OK
+#848/u PTR_TO_STACK check high 5 OK
+#848/p PTR_TO_STACK check high 5 OK
+#849/u PTR_TO_STACK check high 6 OK
+#849/p PTR_TO_STACK check high 6 OK
+#850/u PTR_TO_STACK check high 7 OK
+#850/p PTR_TO_STACK check high 7 OK
+#851/u PTR_TO_STACK check low 1 OK
+#851/p PTR_TO_STACK check low 1 OK
+#852/u PTR_TO_STACK check low 2 OK
+#852/p PTR_TO_STACK check low 2 OK
+#853/u PTR_TO_STACK check low 3 OK
+#853/p PTR_TO_STACK check low 3 OK
+#854/u PTR_TO_STACK check low 4 OK
+#854/p PTR_TO_STACK check low 4 OK
+#855/u PTR_TO_STACK check low 5 OK
+#855/p PTR_TO_STACK check low 5 OK
+#856/u PTR_TO_STACK check low 6 OK
+#856/p PTR_TO_STACK check low 6 OK
+#857/u PTR_TO_STACK check low 7 OK
+#857/p PTR_TO_STACK check low 7 OK
+#858/u PTR_TO_STACK mixed reg/k, 1 OK
+#858/p PTR_TO_STACK mixed reg/k, 1 OK
+#859/u PTR_TO_STACK mixed reg/k, 2 OK
+#859/p PTR_TO_STACK mixed reg/k, 2 OK
+#860/u PTR_TO_STACK mixed reg/k, 3 OK
+#860/p PTR_TO_STACK mixed reg/k, 3 OK
+#861/u PTR_TO_STACK reg OK
+#861/p PTR_TO_STACK reg OK
+#862/u stack pointer arithmetic OK
+#862/p stack pointer arithmetic OK
+#863/u add32 reg zero extend check OK
+#863/p add32 reg zero extend check OK
+#864/u add32 imm zero extend check OK
+#864/p add32 imm zero extend check OK
+#865/u sub32 reg zero extend check OK
+#865/p sub32 reg zero extend check OK
+#866/u sub32 imm zero extend check OK
+#866/p sub32 imm zero extend check OK
+#867/u mul32 reg zero extend check OK
+#867/p mul32 reg zero extend check OK
+#868/u mul32 imm zero extend check OK
+#868/p mul32 imm zero extend check OK
+#869/u div32 reg zero extend check OK
+#869/p div32 reg zero extend check OK
+#870/u div32 imm zero extend check OK
+#870/p div32 imm zero extend check OK
+#871/u or32 reg zero extend check OK
+#871/p or32 reg zero extend check OK
+#872/u or32 imm zero extend check OK
+#872/p or32 imm zero extend check OK
+#873/u and32 reg zero extend check OK
+#873/p and32 reg zero extend check OK
+#874/u and32 imm zero extend check OK
+#874/p and32 imm zero extend check OK
+#875/u lsh32 reg zero extend check OK
+#875/p lsh32 reg zero extend check OK
+#876/u lsh32 imm zero extend check OK
+#876/p lsh32 imm zero extend check OK
+#877/u rsh32 reg zero extend check OK
+#877/p rsh32 reg zero extend check OK
+#878/u rsh32 imm zero extend check OK
+#878/p rsh32 imm zero extend check OK
+#879/u neg32 reg zero extend check OK
+#879/p neg32 reg zero extend check OK
+#880/u mod32 reg zero extend check OK
+#880/p mod32 reg zero extend check OK
+#881/u mod32 imm zero extend check OK
+#881/p mod32 imm zero extend check OK
+#882/u xor32 reg zero extend check OK
+#882/p xor32 reg zero extend check OK
+#883/u xor32 imm zero extend check OK
+#883/p xor32 imm zero extend check OK
+#884/u mov32 reg zero extend check OK
+#884/p mov32 reg zero extend check OK
+#885/u mov32 imm zero extend check OK
+#885/p mov32 imm zero extend check OK
+#886/u arsh32 reg zero extend check OK
+#886/p arsh32 reg zero extend check OK
+#887/u arsh32 imm zero extend check OK
+#887/p arsh32 imm zero extend check OK
+#888/u end16 (to_le) reg zero extend check OK
+#888/p end16 (to_le) reg zero extend check OK
+#889/u end32 (to_le) reg zero extend check OK
+#889/p end32 (to_le) reg zero extend check OK
+#890/u end16 (to_be) reg zero extend check OK
+#890/p end16 (to_be) reg zero extend check OK
+#891/u end32 (to_be) reg zero extend check OK
+#891/p end32 (to_be) reg zero extend check OK
+#892/u ldx_b zero extend check OK
+#892/p ldx_b zero extend check OK
+#893/u ldx_h zero extend check OK
+#893/p ldx_h zero extend check OK
+#894/u ldx_w zero extend check OK
+#894/p ldx_w zero extend check OK
+#895/u read uninitialized register OK
+#895/p read uninitialized register OK
+#896/u read invalid register OK
+#896/p read invalid register OK
+#897/u program doesn't init R0 before exit OK
+#897/p program doesn't init R0 before exit OK
+#898/u program doesn't init R0 before exit in all branches OK
+#898/p program doesn't init R0 before exit in all branches OK
+#899/u unpriv: return pointer OK
+#899/p unpriv: return pointer OK
+#900/u unpriv: add const to pointer OK
+#900/p unpriv: add const to pointer OK
+#901/u unpriv: add pointer to pointer OK
+#901/p unpriv: add pointer to pointer OK
+#902/u unpriv: neg pointer OK
+#902/p unpriv: neg pointer OK
+#903/u unpriv: cmp pointer with const OK
+#903/p unpriv: cmp pointer with const OK
+#904/u unpriv: cmp pointer with pointer OK
+#904/p unpriv: cmp pointer with pointer OK
+#905/p unpriv: check that printk is disallowed SKIP (unsupported program type 5)
+#906/u unpriv: pass pointer to helper function OK
+#906/p unpriv: pass pointer to helper function OK
+#907/u unpriv: indirectly pass pointer on stack to helper function OK
+#907/p unpriv: indirectly pass pointer on stack to helper function OK
+#908/u unpriv: mangle pointer on stack 1 OK
+#908/p unpriv: mangle pointer on stack 1 OK
+#909/u unpriv: mangle pointer on stack 2 OK
+#909/p unpriv: mangle pointer on stack 2 OK
+#910/u unpriv: read pointer from stack in small chunks OK
+#910/p unpriv: read pointer from stack in small chunks OK
+#911/u unpriv: write pointer into ctx OK
+#911/p unpriv: write pointer into ctx OK
+#912/u unpriv: spill/fill of ctx OK
+#912/p unpriv: spill/fill of ctx OK
+#913/p unpriv: spill/fill of ctx 2 OK
+#914/p unpriv: spill/fill of ctx 3 OK
+#915/p unpriv: spill/fill of ctx 4 OK
+#916/p unpriv: spill/fill of different pointers stx OK
+#917/p unpriv: spill/fill of different pointers stx - ctx and sock OK
+#918/p unpriv: spill/fill of different pointers stx - leak sock OK
+#919/p unpriv: spill/fill of different pointers stx - sock and ctx (read) OK
+#920/p unpriv: spill/fill of different pointers stx - sock and ctx (write) OK
+#921/p unpriv: spill/fill of different pointers ldx SKIP (unsupported program type 7)
+#922/u unpriv: write pointer into map elem value OK
+#922/p unpriv: write pointer into map elem value OK
+#923/u alu32: mov u32 const OK
+#923/p alu32: mov u32 const OK
+#924/u unpriv: partial copy of pointer OK
+#924/p unpriv: partial copy of pointer OK
+#925/u unpriv: pass pointer to tail_call OK
+#925/p unpriv: pass pointer to tail_call OK
+#926/u unpriv: cmp map pointer with zero OK
+#926/p unpriv: cmp map pointer with zero OK
+#927/u unpriv: write into frame pointer OK
+#927/p unpriv: write into frame pointer OK
+#928/u unpriv: spill/fill frame pointer OK
+#928/p unpriv: spill/fill frame pointer OK
+#929/u unpriv: cmp of frame pointer OK
+#929/p unpriv: cmp of frame pointer OK
+#930/u unpriv: adding of fp OK
+#930/p unpriv: adding of fp OK
+#931/u unpriv: cmp of stack pointer OK
+#931/p unpriv: cmp of stack pointer OK
+#932/u map element value is preserved across register spilling OK
+#932/p map element value is preserved across register spilling OK
+#933/u map element value or null is marked on register spilling OK
+#933/p map element value or null is marked on register spilling OK
+#934/u map element value store of cleared call register OK
+#934/p map element value store of cleared call register OK
+#935/u map element value with unaligned store FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: R1 !read_ok
+verification time 113 usec
+stack depth 8
+processed 7 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+R1 !read_ok
+verification time 113 usec
+stack depth 8
+processed 7 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#935/p map element value with unaligned store OK (NOTE: not executed due to unknown alignment)
+#936/u map element value with unaligned load FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: verification time 137 usec
+stack depth 8
+processed 25 insns (limit 1000000) max_states_per_insn 1 total_states 1 peak_states 1 mark_read 1
+
+verification time 137 usec
+stack depth 8
+processed 25 insns (limit 1000000) max_states_per_insn 1 total_states 1 peak_states 1 mark_read 1
+#936/p map element value with unaligned load OK (NOTE: not executed due to unknown alignment)
+#937/u map element value is preserved across register spilling FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: verification time 444 usec
+stack depth 8
+processed 20 insns (limit 1000000) max_states_per_insn 1 total_states 2 peak_states 2 mark_read 1
+
+verification time 444 usec
+stack depth 8
+processed 20 insns (limit 1000000) max_states_per_insn 1 total_states 2 peak_states 2 mark_read 1
+#937/p map element value is preserved across register spilling OK (NOTE: not executed due to unknown alignment)
+#938/u map element value illegal alu op, 1 OK
+#938/p map element value illegal alu op, 1 OK
+#939/u map element value illegal alu op, 2 OK
+#939/p map element value illegal alu op, 2 OK
+#940/u map element value illegal alu op, 3 OK
+#940/p map element value illegal alu op, 3 OK
+#941/u map element value illegal alu op, 4 FAIL
+Unexpected error message!
+    EXP: R0 pointer arithmetic prohibited
+    RES: R0 pointer arithmetic with /= operator prohibited
+verification time 113 usec
+stack depth 8
+processed 7 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+R0 pointer arithmetic with /= operator prohibited
+verification time 113 usec
+stack depth 8
+processed 7 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#941/p map element value illegal alu op, 4 OK
+#942/u map element value illegal alu op, 5 OK
+#942/p map element value illegal alu op, 5 OK
+#943/p multiple registers share map_lookup_elem result OK
+#944/p alu ops on ptr_to_map_value_or_null, 1 OK
+#945/p alu ops on ptr_to_map_value_or_null, 2 OK
+#946/p alu ops on ptr_to_map_value_or_null, 3 OK
+#947/p invalid memory access with multiple map_lookup_elem calls OK
+#948/p valid indirect map_lookup_elem access with 2nd lookup in branch OK
+#949/u invalid map access from else condition FAIL
+Unexpected error message!
+    EXP: R0 leaks addr
+    RES: verification time 139 usec
+stack depth 8
+processed 15 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+
+verification time 139 usec
+stack depth 8
+processed 15 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#949/p invalid map access from else condition OK
+#950/u map access: known scalar += value_ptr from different maps OK
+#950/p map access: known scalar += value_ptr from different maps OK
+#951/u map access: value_ptr -= known scalar from different maps OK
+#951/p map access: value_ptr -= known scalar from different maps OK
+#952/u map access: known scalar += value_ptr from different maps, but same value properties OK
+#952/p map access: known scalar += value_ptr from different maps, but same value properties OK
+#953/u map access: mixing value pointer and scalar, 1 OK
+#953/p map access: mixing value pointer and scalar, 1 OK
+#954/u map access: mixing value pointer and scalar, 2 OK
+#954/p map access: mixing value pointer and scalar, 2 OK
+#955/u sanitation: alu with different scalars 1 OK
+#955/p sanitation: alu with different scalars 1 OK
+#956/u sanitation: alu with different scalars 2 OK
+#956/p sanitation: alu with different scalars 2 OK
+#957/u sanitation: alu with different scalars 3 OK
+#957/p sanitation: alu with different scalars 3 OK
+#958/u map access: value_ptr += known scalar, upper oob arith, test 1 OK
+#958/p map access: value_ptr += known scalar, upper oob arith, test 1 OK
+#959/u map access: value_ptr += known scalar, upper oob arith, test 2 OK
+#959/p map access: value_ptr += known scalar, upper oob arith, test 2 OK
+#960/u map access: value_ptr += known scalar, upper oob arith, test 3 OK
+#960/p map access: value_ptr += known scalar, upper oob arith, test 3 OK
+#961/u map access: value_ptr -= known scalar, lower oob arith, test 1 OK
+#961/p map access: value_ptr -= known scalar, lower oob arith, test 1 OK
+#962/u map access: value_ptr -= known scalar, lower oob arith, test 2 OK
+#962/p map access: value_ptr -= known scalar, lower oob arith, test 2 OK
+#963/u map access: value_ptr -= known scalar, lower oob arith, test 3 OK
+#963/p map access: value_ptr -= known scalar, lower oob arith, test 3 OK
+#964/u map access: known scalar += value_ptr OK
+#964/p map access: known scalar += value_ptr OK
+#965/u map access: value_ptr += known scalar, 1 OK
+#965/p map access: value_ptr += known scalar, 1 OK
+#966/u map access: value_ptr += known scalar, 2 OK
+#966/p map access: value_ptr += known scalar, 2 OK
+#967/u map access: value_ptr += known scalar, 3 OK
+#967/p map access: value_ptr += known scalar, 3 OK
+#968/u map access: value_ptr += known scalar, 4 OK
+#968/p map access: value_ptr += known scalar, 4 OK
+#969/u map access: value_ptr += known scalar, 5 OK
+#969/p map access: value_ptr += known scalar, 5 OK
+#970/u map access: value_ptr += known scalar, 6 OK
+#970/p map access: value_ptr += known scalar, 6 OK
+#971/u map access: unknown scalar += value_ptr, 1 OK
+#971/p map access: unknown scalar += value_ptr, 1 OK
+#972/u map access: unknown scalar += value_ptr, 2 FAIL
+Failed to load prog 'Success'!
+verification time 287 usec
+stack depth 8
+processed 13 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 0
+#972/p map access: unknown scalar += value_ptr, 2 OK (NOTE: not executed due to unknown alignment)
+#973/u map access: unknown scalar += value_ptr, 3 FAIL
+Unexpected error message!
+    EXP: R0 pointer arithmetic of map value goes out of range
+    RES: verification time 193 usec
+stack depth 8
+processed 12 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+
+verification time 193 usec
+stack depth 8
+processed 12 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#973/p map access: unknown scalar += value_ptr, 3 OK (NOTE: not executed due to unknown alignment)
+#974/u map access: unknown scalar += value_ptr, 4 FAIL
+Unexpected error message!
+    EXP: R1 pointer arithmetic of map value goes out of range
+    RES: verification time 325 usec
+stack depth 8
+processed 16 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+
+verification time 325 usec
+stack depth 8
+processed 16 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 1
+#974/p map access: unknown scalar += value_ptr, 4 OK
+#975/u map access: value_ptr += unknown scalar, 1 OK
+#975/p map access: value_ptr += unknown scalar, 1 OK
+#976/u map access: value_ptr += unknown scalar, 2 FAIL
+Failed to load prog 'Success'!
+verification time 180 usec
+stack depth 8
+processed 13 insns (limit 1000000) max_states_per_insn 0 total_states 1 peak_states 1 mark_read 0
+#976/p map access: value_ptr += unknown scalar, 2 OK (NOTE: not executed due to unknown alignment)
+#977/u map access: value_ptr += unknown scalar, 3 OK
+#977/p map access: value_ptr += unknown scalar, 3 OK
+#978/u map access: value_ptr += value_ptr OK
+#978/p map access: value_ptr += value_ptr OK
+#979/u map access: known scalar -= value_ptr OK
+#979/p map access: known scalar -= value_ptr OK
+#980/u map access: value_ptr -= known scalar OK
+#980/p map access: value_ptr -= known scalar OK
+#981/u map access: value_ptr -= known scalar, 2 OK
+#981/p map access: value_ptr -= known scalar, 2 OK
+#982/u map access: unknown scalar -= value_ptr OK
+#982/p map access: unknown scalar -= value_ptr OK
+#983/u map access: value_ptr -= unknown scalar OK
+#983/p map access: value_ptr -= unknown scalar OK
+#984/u map access: value_ptr -= unknown scalar, 2 OK
+#984/p map access: value_ptr -= unknown scalar, 2 OK
+#985/u map access: value_ptr -= value_ptr OK
+#985/p map access: value_ptr -= value_ptr OK
+#986/p variable-offset ctx access OK
+#987/p variable-offset stack access OK
+#988/p indirect variable-offset stack access, unbounded OK
+#989/p indirect variable-offset stack access, max out of bound OK
+#990/p indirect variable-offset stack access, min out of bound OK
+#991/p indirect variable-offset stack access, max_off+size > max_initialized OK
+#992/p indirect variable-offset stack access, min_off < min_initialized OK
+#993/u indirect variable-offset stack access, priv vs unpriv OK
+#993/p indirect variable-offset stack access, priv vs unpriv OK
+#994/p indirect variable-offset stack access, uninitialized OK
+#995/p indirect variable-offset stack access, ok OK
+#996/p wide store to bpf_sock_addr.user_ip6[0] OK
+#997/p wide store to bpf_sock_addr.user_ip6[1] FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access off=12 size=8
+    RES: misaligned context access off (0x0; 0x0)+0+12 size 8
+verification time 89 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned context access off (0x0; 0x0)+0+12 size 8
+verification time 89 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#998/p wide store to bpf_sock_addr.user_ip6[2] OK
+#999/p wide store to bpf_sock_addr.user_ip6[3] FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access off=20 size=8
+    RES: misaligned context access off (0x0; 0x0)+0+20 size 8
+verification time 221 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned context access off (0x0; 0x0)+0+20 size 8
+verification time 221 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#1000/p wide store to bpf_sock_addr.msg_src_ip6[0] FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access off=44 size=8
+    RES: misaligned context access off (0x0; 0x0)+0+44 size 8
+verification time 88 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned context access off (0x0; 0x0)+0+44 size 8
+verification time 88 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#1001/p wide store to bpf_sock_addr.msg_src_ip6[1] OK
+#1002/p wide store to bpf_sock_addr.msg_src_ip6[2] FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access off=52 size=8
+    RES: misaligned context access off (0x0; 0x0)+0+52 size 8
+verification time 87 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned context access off (0x0; 0x0)+0+52 size 8
+verification time 87 usec
+stack depth 0
+processed 2 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#1003/p wide store to bpf_sock_addr.msg_src_ip6[3] OK
+#1004/p wide load from bpf_sock_addr.user_ip6[0] OK
+#1005/p wide load from bpf_sock_addr.user_ip6[1] FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access off=12 size=8
+    RES: misaligned context access off (0x0; 0x0)+0+12 size 8
+verification time 87 usec
+stack depth 0
+processed 1 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned context access off (0x0; 0x0)+0+12 size 8
+verification time 87 usec
+stack depth 0
+processed 1 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#1006/p wide load from bpf_sock_addr.user_ip6[2] OK
+#1007/p wide load from bpf_sock_addr.user_ip6[3] FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access off=20 size=8
+    RES: misaligned context access off (0x0; 0x0)+0+20 size 8
+verification time 88 usec
+stack depth 0
+processed 1 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned context access off (0x0; 0x0)+0+20 size 8
+verification time 88 usec
+stack depth 0
+processed 1 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#1008/p wide load from bpf_sock_addr.msg_src_ip6[0] FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access off=44 size=8
+    RES: misaligned context access off (0x0; 0x0)+0+44 size 8
+verification time 86 usec
+stack depth 0
+processed 1 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned context access off (0x0; 0x0)+0+44 size 8
+verification time 86 usec
+stack depth 0
+processed 1 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#1009/p wide load from bpf_sock_addr.msg_src_ip6[1] OK
+#1010/p wide load from bpf_sock_addr.msg_src_ip6[2] FAIL
+Unexpected error message!
+    EXP: invalid bpf_context access off=52 size=8
+    RES: misaligned context access off (0x0; 0x0)+0+52 size 8
+verification time 87 usec
+stack depth 0
+processed 1 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+
+misaligned context access off (0x0; 0x0)+0+52 size 8
+verification time 87 usec
+stack depth 0
+processed 1 insns (limit 1000000) max_states_per_insn 0 total_states 0 peak_states 0 mark_read 0
+#1011/p wide load from bpf_sock_addr.msg_src_ip6[3] OK
+#1012/p xadd/w check unaligned stack OK
+#1013/p xadd/w check unaligned map OK
+#1014/p xadd/w check unaligned pkt OK
+#1015/p xadd/w check whether src/dst got mangled, 1 OK
+#1016/p xadd/w check whether src/dst got mangled, 2 OK
+#1017/p XDP, using ifindex from netdev OK
+#1018/p XDP pkt read, pkt_end mangling, bad access 1 OK
+#1019/p XDP pkt read, pkt_end mangling, bad access 2 OK
+#1020/p XDP pkt read, pkt_data' > pkt_end, good access OK (NOTE: not executed due to unknown alignment)
+#1021/p XDP pkt read, pkt_data' > pkt_end, bad access 1 OK
+#1022/p XDP pkt read, pkt_data' > pkt_end, bad access 2 OK
+#1023/p XDP pkt read, pkt_end > pkt_data', good access OK (NOTE: not executed due to unknown alignment)
+#1024/p XDP pkt read, pkt_end > pkt_data', bad access 1 OK
+#1025/p XDP pkt read, pkt_end > pkt_data', bad access 2 OK
+#1026/p XDP pkt read, pkt_data' < pkt_end, good access OK (NOTE: not executed due to unknown alignment)
+#1027/p XDP pkt read, pkt_data' < pkt_end, bad access 1 OK
+#1028/p XDP pkt read, pkt_data' < pkt_end, bad access 2 OK
+#1029/p XDP pkt read, pkt_end < pkt_data', good access OK (NOTE: not executed due to unknown alignment)
+#1030/p XDP pkt read, pkt_end < pkt_data', bad access 1 OK
+#1031/p XDP pkt read, pkt_end < pkt_data', bad access 2 OK
+#1032/p XDP pkt read, pkt_data' >= pkt_end, good access OK (NOTE: not executed due to unknown alignment)
+#1033/p XDP pkt read, pkt_data' >= pkt_end, bad access 1 OK
+#1034/p XDP pkt read, pkt_data' >= pkt_end, bad access 2 OK
+#1035/p XDP pkt read, pkt_end >= pkt_data', good access OK (NOTE: not executed due to unknown alignment)
+#1036/p XDP pkt read, pkt_end >= pkt_data', bad access 1 OK
+#1037/p XDP pkt read, pkt_end >= pkt_data', bad access 2 OK
+#1038/p XDP pkt read, pkt_data' <= pkt_end, good access OK (NOTE: not executed due to unknown alignment)
+#1039/p XDP pkt read, pkt_data' <= pkt_end, bad access 1 OK
+#1040/p XDP pkt read, pkt_data' <= pkt_end, bad access 2 OK
+#1041/p XDP pkt read, pkt_end <= pkt_data', good access OK (NOTE: not executed due to unknown alignment)
+#1042/p XDP pkt read, pkt_end <= pkt_data', bad access 1 OK
+#1043/p XDP pkt read, pkt_end <= pkt_data', bad access 2 OK
+#1044/p XDP pkt read, pkt_meta' > pkt_data, good access OK (NOTE: not executed due to unknown alignment)
+#1045/p XDP pkt read, pkt_meta' > pkt_data, bad access 1 OK
+#1046/p XDP pkt read, pkt_meta' > pkt_data, bad access 2 OK
+#1047/p XDP pkt read, pkt_data > pkt_meta', good access OK (NOTE: not executed due to unknown alignment)
+#1048/p XDP pkt read, pkt_data > pkt_meta', bad access 1 OK
+#1049/p XDP pkt read, pkt_data > pkt_meta', bad access 2 OK
+#1050/p XDP pkt read, pkt_meta' < pkt_data, good access OK (NOTE: not executed due to unknown alignment)
+#1051/p XDP pkt read, pkt_meta' < pkt_data, bad access 1 OK
+#1052/p XDP pkt read, pkt_meta' < pkt_data, bad access 2 OK
+#1053/p XDP pkt read, pkt_data < pkt_meta', good access OK (NOTE: not executed due to unknown alignment)
+#1054/p XDP pkt read, pkt_data < pkt_meta', bad access 1 OK
+#1055/p XDP pkt read, pkt_data < pkt_meta', bad access 2 OK
+#1056/p XDP pkt read, pkt_meta' >= pkt_data, good access OK (NOTE: not executed due to unknown alignment)
+#1057/p XDP pkt read, pkt_meta' >= pkt_data, bad access 1 OK
+#1058/p XDP pkt read, pkt_meta' >= pkt_data, bad access 2 OK
+#1059/p XDP pkt read, pkt_data >= pkt_meta', good access OK (NOTE: not executed due to unknown alignment)
+#1060/p XDP pkt read, pkt_data >= pkt_meta', bad access 1 OK
+#1061/p XDP pkt read, pkt_data >= pkt_meta', bad access 2 OK
+#1062/p XDP pkt read, pkt_meta' <= pkt_data, good access OK (NOTE: not executed due to unknown alignment)
+#1063/p XDP pkt read, pkt_meta' <= pkt_data, bad access 1 OK
+#1064/p XDP pkt read, pkt_meta' <= pkt_data, bad access 2 OK
+#1065/p XDP pkt read, pkt_data <= pkt_meta', good access OK (NOTE: not executed due to unknown alignment)
+#1066/p XDP pkt read, pkt_data <= pkt_meta', bad access 1 OK
+#1067/p XDP pkt read, pkt_data <= pkt_meta', bad access 2 OK
+Summary: 1411 PASSED, 122 SKIPPED, 47 FAILED
