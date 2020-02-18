@@ -24,13 +24,6 @@ def filter(d, result):
 
 res = {}
 
-for name in glob.glob('*.txt'):
+for name in glob.glob('*.log'):
     res[name.split('.')[0]] = read_test_results(name)
 
-# jit = read_test_results('jit.txt')
-# interp = read_test_results('interp.txt')
-# jit2 = read_test_results('jit2.txt')
-
-# print(filter(jit, 'SKIP') ^ filter(interp, 'SKIP'))
-
-# from ipdb import set_trace; set_trace()
