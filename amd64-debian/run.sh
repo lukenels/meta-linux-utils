@@ -1,5 +1,5 @@
 #!/bin/sh
-$HOME/repo/qemu/i386-softmmu/qemu-system-i386 \
+$HOME/repo/qemu/x86_64-softmmu/qemu-system-x86_64 \
 	-nographic \
 	-kernel ~/repo/linux/arch/x86/boot/bzImage \
 	-hda snapshot.img \
