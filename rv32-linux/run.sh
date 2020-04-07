@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-LINUX=${LINUX:-$HOME/repo/linux}
-QEMU=${QEMU:-$HOME/repo/qemu}
+. ../config.sh
 
 $QEMU/riscv32-softmmu/qemu-system-riscv32 \
    -M virt -nographic \
