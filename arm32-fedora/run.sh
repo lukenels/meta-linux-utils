@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-LINUX=${LINUX:-$HOME/repo/linux}
-QEMU=${QEMU:-$HOME/repo/qemu}
+. ../config.sh
 
 $QEMU/arm-softmmu/qemu-system-arm \
    -M virt -nographic \
@@ -11,6 +9,6 @@ $QEMU/arm-softmmu/qemu-system-arm \
    -device virtio-blk-device,drive=hd0 \
    -append "earlycon console=/dev/ttyPS0 root=/dev/vda3 rw" \
    -netdev user,id=net0,hostfwd=tcp::10000-:22 -device virtio-net-device,netdev=net0 \
-   -fsdev local,security_model=passthrough,id=fsdev0,path=$LINUX \
-   -device virtio-9p-pci,id=fs0,fsdev=fsdev0,mount_tag=hostshare \
-   -m 2G
+   -fsdev local,security_model=mapped,id=fsdev0,path=$LINUX \
+   -device virtio-9p-device,id=fs0,fsdev=fsdev0,mount_tag=hostshare \
+   -m 3G

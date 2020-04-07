@@ -1,1 +1,6 @@
 .DS_Store
+*.qcow2
+*.img
+*.ext2
+*.ext2
+*.log
