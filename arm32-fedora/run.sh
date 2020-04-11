@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-. ../config.sh
+. $(dirname $0)/../config.sh
 
 $QEMU/arm-softmmu/qemu-system-arm \
    -M virt -nographic \
