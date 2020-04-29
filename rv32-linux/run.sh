@@ -5,8 +5,8 @@
 $QEMU/riscv32-softmmu/qemu-system-riscv32 \
    -M virt -nographic \
    -m 2G \
-   -kernel $(dirname $0)/fw_jump.elf \
-   -device loader,file=$LINUX/arch/riscv/boot/Image,addr=0x80400000 \
+   -bios default \
+   -kernel $LINUX/arch/riscv/boot/Image \
    -append "root=/dev/vda ro" \
    -drive file=$(dirname $0)/rootfs.ext2,format=raw,id=hd0 \
    -device virtio-blk-device,drive=hd0 \
