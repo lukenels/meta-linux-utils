@@ -10,7 +10,7 @@ export CONFIG_MEMORY=4G
 export CONFIG_SSH_KEY="${HOME}/.ssh/id_ed25519.pub"
 
 # Path to QEMU repo
-export QEMU=${QEMU:-$HOME/repo/qemu}
+export QEMU=${QEMU:-/opt/qemu}
 
 # Path to Linux repo
 export LINUX=${LINUX:-$HOME/repo/linux}
