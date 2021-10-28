@@ -2,7 +2,7 @@
 set -euo pipefail;
 . "$(dirname "$0")"/../config.sh;
 
-$QEMU/riscv64-softmmu/qemu-system-riscv64 \
+qemu-system-riscv64 \
    -M virt -m 4G -smp 4 -nographic \
    -bios default \
    -kernel $LINUX/arch/riscv/boot/Image \
